@@ -2,7 +2,7 @@
 
 Site estático em HTML, CSS e JavaScript. Não há etapa de build: o workflow `.github/workflows/pages.yml` publica o conteúdo na branch `main` pelo GitHub Pages.
 
-Site público: <https://mochyzuky.github.io/briefing-tecnico/>
+Site público: <https://briefingtécnico.com.br/> (`xn--briefingtcnico-jkb.com.br` no DNS)
 
 ## Atualizar
 
@@ -14,9 +14,25 @@ Para testar localmente, execute `py -m http.server 8000` na pasta do site e abra
 - Fontes de pesquisa e clima: `data/fontes-pesquisa.js`.
 - Fontes do mercado: `data/mercado-fontes.js`.
 
-## Domínio próprio
+## DNS do domínio próprio
 
-O domínio próprio não está configurado. Não adicione um arquivo `CNAME` nem altere as configurações de domínio do Pages até confirmar a titularidade e configurar o DNS. O site funciona pelo endereço padrão do GitHub Pages enquanto isso.
+O GitHub Pages está configurado para `xn--briefingtcnico-jkb.com.br`; o arquivo `CNAME` contém esse nome técnico. No DNS autoritativo do domínio, adicione os registros abaixo sem remover ou substituir outros registros existentes:
+
+| Tipo | Nome | Valor |
+|---|---|---|
+| A | `@` (ou vazio) | `185.199.108.153` |
+| A | `@` (ou vazio) | `185.199.109.153` |
+| A | `@` (ou vazio) | `185.199.110.153` |
+| A | `@` (ou vazio) | `185.199.111.153` |
+| AAAA | `@` (ou vazio) | `2606:50c0:8000::153` |
+| AAAA | `@` (ou vazio) | `2606:50c0:8001::153` |
+| AAAA | `@` (ou vazio) | `2606:50c0:8002::153` |
+| AAAA | `@` (ou vazio) | `2606:50c0:8003::153` |
+| CNAME | `www` | `mochyzuky.github.io` |
+
+Após a propagação, confira **Settings → Pages** no GitHub e habilite **Enforce HTTPS** quando o certificado estiver disponível. A configuração em `www` é adicional; o endereço principal é o domínio sem `www`.
+
+Para verificar os registros, consulte os tipos A, AAAA para o domínio raiz e CNAME para `www`. O domínio pode continuar sendo servido por `https://mochyzuky.github.io/briefing-tecnico/` durante a propagação.
 
 ## Conteúdo e créditos
 
