@@ -1,0 +1,47 @@
+/* Banner da tela inicial · Briefing Técnico (27/10/2026)
+ * Carrega depois dos outros arquivos de estilo. Só afeta a capa da página inicial
+ * (a seção com a classe "capa-com-banner").
+ * Imagens em assets/banners/:
+ *   banner-inicial.jpg        computador (a partir de 1241 px): quadrado à direita do texto
+ *   banner-inicial-medio.jpg  notebook (1001 a 1240 px): vertical, à direita do texto
+ *   banner-inicial-faixa.jpg  tablet e celular (até 1000 px): faixa no alto, texto embaixo
+ * Fotos reais do acervo do autor (avião agrícola, céu e vista aérea de Juína). Gerado por _gera_banner.py.
+ */
+
+/* Computador (a partir de 1241 px): quadrado à direita, sumindo suavemente atrás do texto */
+.capa-com-banner .capa-foto {
+  left: auto;
+  right: 0;
+  width: auto;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center bottom;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.6) 7%, #000 14%);
+          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.6) 7%, #000 14%);
+}
+.capa-com-banner .capa-veu { background: linear-gradient(90deg, rgba(17,25,27,.35) 0%, rgba(17,25,27,0) 45%); }
+.capa-com-banner h1 { text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+
+/* Notebook (1001 a 1240 px): versão vertical, ocupando metade da largura */
+@media (max-width: 1240px) {
+  .capa-com-banner .capa-foto { width: 50%; aspect-ratio: auto; }
+}
+
+/* Tablet e celular (até 1000 px): faixa com as três áreas no alto, texto logo abaixo */
+@media (max-width: 1000px) {
+  .capa-com-banner { flex-direction: column; align-items: stretch; padding-top: 0; }
+  .capa-com-banner picture { display: block; }
+  .capa-com-banner .capa-foto {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 720;
+    object-position: center;
+    -webkit-mask-image: linear-gradient(180deg, #000 92%, transparent 100%);
+            mask-image: linear-gradient(180deg, #000 92%, transparent 100%);
+  }
+  .capa-com-banner .capa-veu { display: none; }
+  .capa-com-banner .container { padding-top: 26px; }
+}

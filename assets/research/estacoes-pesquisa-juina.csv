@@ -1,0 +1,8 @@
+﻿codigo;nome;latitude;longitude;distancia_centro_km;dentro_da_area;area_influencia_km2;pct_area;cobertura_pct;situacao_dados
+A920;Juína;-11.3750;-58.7750;5.3;sim;25747;97.70;85.6;dados úteis
+A914;Juara;-11.2800;-57.5270;135.3;não;0;0.00;0;sem dados no período
+A927;Brasnorte;-12.5220;-58.2310;135.4;não;606;2.30;53.2;cobertura parcial (<60%)
+A911;Sapezal;-13.3040;-58.7630;209.5;não;0;0.00;100;dados úteis
+A910;Apiacás;-9.5630;-57.3940;254.8;não;0;0.00;16;cobertura parcial (<60%)
+A928;Nova Maringá;-13.0390;-57.0920;255.5;não;0;0.00;100;dados úteis
+A903;São José do Rio Claro;-13.4540;-56.6770;319.9;não;0;0.00;100;dados úteis

@@ -1,0 +1,39 @@
+# Publica o site no GitHub Pages a cada envio (push) para a branch main.
+name: Publicar site no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Baixar os arquivos do repositório
+        uses: actions/checkout@v4
+      - name: Configurar o Pages
+        uses: actions/configure-pages@v5
+      - name: Preparar o site (sem a pasta .github)
+        run: |
+          mkdir -p _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'README.md' ./ _site/
+      - name: Enviar o pacote do site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Publicar
+        id: deploy
+        uses: actions/deploy-pages@v4

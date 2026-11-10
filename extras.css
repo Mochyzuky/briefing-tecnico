@@ -1,0 +1,15 @@
+/* Complementos informativos da área SCR. */
+.faq-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 48px 0 6px;
+  color: var(--ink-muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.faq-subtitle::before { width: 28px; height: 1px; background: var(--gold-deep); content: ""; }
+.faq-note { margin: 0 0 10px; color: var(--ink-muted); font-size: 14px; }

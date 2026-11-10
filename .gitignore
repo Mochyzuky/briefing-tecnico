@@ -1,0 +1,13 @@
+# Cópias de segurança e pacotes gerados localmente
+_backup/
+_pacotes/
+*.zip
+
+# Arquivos do sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+*.swp

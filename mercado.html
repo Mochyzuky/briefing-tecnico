@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11191b">
+    <meta name="description" content="Séries econômicas do Banco Central consultadas automaticamente, links para cotações agropecuárias nas fontes originais e calculadoras de mercado da Briefing Técnico.">
+    <title>Pesquisa de mercado agropecuário · Juína, MT | Briefing Técnico</title>
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Pesquisa de mercado agropecuário · Briefing Técnico">
+    <meta property="og:description" content="Séries econômicas do Banco Central, fontes originais de cotações agropecuárias e calculadoras informativas.">
+    <link rel="icon" href="assets/brand/briefing-tecnico-marca.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=nav-20261015">
+    <link rel="stylesheet" href="mercado.css?v=source-terms-20261022">
+    <link rel="stylesheet" href="navegacao.css?v=nav-20261015">
+    <link rel="stylesheet" href="ajustes.css?v=20261021">
+    <script src="data/mercado-fontes.js?v=source-terms-20261022" defer></script>
+    <script src="script.js?v=locations-br-20261022" defer></script>
+    <script src="navegacao.js?v=nav-20261015" defer></script>
+    <script src="mercado.js?v=source-terms-20261022" defer></script>
+  </head>
+  <body class="obs-page mercado-page">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand-lockup" href="index.html" aria-label="Briefing Técnico, página inicial">
+          <img src="assets/brand/briefing-tecnico-marca.svg" alt="" width="44" height="46">
+          <span>Briefing <strong>Técnico</strong></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span>Menu</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+        <nav class="main-nav" id="main-navigation" aria-label="Áreas principais">
+  <a class="topico" href="briefing.html">Briefing Técnico</a>
+  <a class="topico" href="scr.html" aria-current="page">Produtor rural</a>
+  <a class="topico" href="perfect-protection.html">Perfect Protection · Aviação</a>
+  <a class="topico" href="index.html#janela-contato">Contato</a>
+</nav>
+      </div>
+    </header>
+
+    <nav class="obs-subnav" aria-label="Seções da pesquisa de mercado">
+      <div class="container obs-subnav-row" data-subnav>
+        <a href="pesquisa.html">Pesquisa rural</a>
+        <a href="observatorio.html">Tempo e clima</a>
+        <a href="scr.html">Produtor rural</a>
+        <a href="#indicadores">Indicadores</a>
+        <a href="#fontes">Onde consultar</a>
+        <a href="#calculadoras">Calculadoras</a>
+        <a href="#minhas-cotacoes">Minhas cotações</a>
+        <a href="#como-usar">Como usar</a>
+      </div>
+    </nav>
+
+    <main id="conteudo">
+      <!-- Abertura -->
+      <section class="obs-hero mkt-hero">
+        <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+        <div class="container obs-hero-grid">
+          <div class="obs-hero-copy">
+            <p class="eyebrow"><span></span> Pesquisa · Mercado agropecuário</p>
+            <h1>Variações do mercado,<br>em um só <em>lugar.</em></h1>
+            <p class="hero-description">Séries econômicas do Banco Central consultadas automaticamente, links para mercados financeiros e fontes originais de cotações agropecuárias, além de calculadoras para comparar preços e relações de troca.</p>
+            <div class="hero-actions">
+              <a class="button button-gold" href="#fontes">Procurar uma cotação <span aria-hidden="true">↓</span></a>
+              <a class="inline-link" href="#calculadoras">Calcular variação <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <div class="mkt-shortcuts" aria-label="Atalhos para Juína e Mato Grosso">
+            <p class="mkt-shortcuts-title">Atalhos · Juína e Mato Grosso</p>
+            <a class="obs-tile mkt-shortcut" href="https://www.agrolink.com.br/regional/mt/juina/cotacoes" target="_blank" rel="noopener noreferrer">
+              <span>Agrolink · praça de Juína</span>
+              <strong>Boi, vaca e novilha <b aria-hidden="true">↗</b></strong>
+              <p>Cotações regionais coletadas em Juína</p>
+            </a>
+            <a class="obs-tile mkt-shortcut" href="https://www.scotconsultoria.com.br/cotacoes/boi-gordo/" target="_blank" rel="noopener noreferrer">
+              <span>Scot Consultoria · praças de MT</span>
+              <strong>Boi gordo <b aria-hidden="true">↗</b></strong>
+              <p>Norte, Sudoeste, Cuiabá e Sudeste</p>
+            </a>
+            <a class="obs-tile mkt-shortcut" href="https://www.scotconsultoria.com.br/cotacoes/reposicao/" target="_blank" rel="noopener noreferrer">
+              <span>Scot Consultoria · MT</span>
+              <strong>Reposição <b aria-hidden="true">↗</b></strong>
+              <p>Bezerro, garrote, boi magro e relação de troca</p>
+            </a>
+            <a class="obs-tile mkt-shortcut" href="https://www.imea.com.br/imea-site/relatorios-mercado" target="_blank" rel="noopener noreferrer">
+              <span>IMEA · Mato Grosso</span>
+              <strong>Boletins semanais <b aria-hidden="true">↗</b></strong>
+              <p>Bovinocultura, soja e milho no estado</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1. Indicadores automáticos -->
+      <section class="obs-section section-light" id="indicadores" aria-labelledby="ind-title" data-indicadores>
+        <div class="container">
+          <div class="mkt-head-row">
+            <div class="obs-head">
+              <p class="eyebrow eyebrow-light"><span></span> Atualizado automaticamente</p>
+              <h2 id="ind-title">Indicadores que <em>mexem nos preços.</em></h2>
+              <p>O dólar puxa o preço da soja, do milho e do boi exportado; os juros pesam no custo das parcelas de financiamentos; o índice de commodities do Banco Central resume a variação dos preços agropecuários em reais.</p>
+            </div>
+            <button class="button button-ghost mkt-refresh" type="button" data-ind-refresh>Atualizar <span aria-hidden="true">↻</span></button>
+          </div>
+
+          <div class="mkt-ind-grid">
+            <article class="mkt-ind" data-ind="dolar" aria-labelledby="ind-dolar">
+              <h3 id="ind-dolar">Taxa de câmbio · dólar venda</h3>
+              <p class="mkt-ind-value"><strong data-ind-valor>—</strong><span data-ind-unidade>R$ por US$ · série diária do SGS</span></p>
+              <ul class="mkt-ind-deltas" data-ind-deltas><li>Carregando…</li></ul>
+              <div class="mkt-spark" data-ind-spark></div>
+              <p class="mkt-ind-foot" data-ind-data>Banco Central · série 1</p>
+            </article>
+            <article class="mkt-ind" data-ind="icbr" aria-labelledby="ind-icbr">
+              <h3 id="ind-icbr">Commodities agropecuárias</h3>
+              <p class="mkt-ind-value"><strong data-ind-valor>—</strong><span data-ind-unidade>IC-Br Agropecuária (índice)</span></p>
+              <ul class="mkt-ind-deltas" data-ind-deltas><li>Carregando…</li></ul>
+              <div class="mkt-spark" data-ind-spark></div>
+              <p class="mkt-ind-foot" data-ind-data>Banco Central · série 27575</p>
+            </article>
+            <article class="mkt-ind" data-ind="ipca" aria-labelledby="ind-ipca">
+              <h3 id="ind-ipca">Inflação (IPCA)</h3>
+              <p class="mkt-ind-value"><strong data-ind-valor>—</strong><span data-ind-unidade>acumulada em 12 meses</span></p>
+              <ul class="mkt-ind-deltas" data-ind-deltas><li>Carregando…</li></ul>
+              <div class="mkt-spark" data-ind-spark></div>
+              <p class="mkt-ind-foot" data-ind-data>Banco Central · série 13522</p>
+            </article>
+            <article class="mkt-ind" data-ind="selic" aria-labelledby="ind-selic">
+              <h3 id="ind-selic">Juros (meta Selic)</h3>
+              <p class="mkt-ind-value"><strong data-ind-valor>—</strong><span data-ind-unidade>ao ano, definida pelo Copom</span></p>
+              <ul class="mkt-ind-deltas" data-ind-deltas><li>Carregando…</li></ul>
+              <p class="mkt-ind-note">Taxa básica da economia. Serve de referência para o custo do dinheiro, inclusive em operações de crédito.</p>
+              <p class="mkt-ind-foot" data-ind-data>Banco Central · série 432</p>
+            </article>
+          </div>
+          <p class="mkt-status" data-ind-status aria-live="polite">Consultando o Banco Central…</p>
+          <div class="mkt-source-note">
+            <p><strong>Fonte e atualização:</strong> séries 1 (taxa de câmbio), 27575 (IC-Br Agropecuária), 13522 (IPCA) e 432 (meta Selic), consultadas automaticamente na API do <a href="https://www3.bcb.gov.br/sgspub/" target="_blank" rel="noopener noreferrer">Sistema Gerenciador de Séries Temporais (SGS) do Banco Central do Brasil</a>. Consulte também o <a href="https://dadosabertos.bcb.gov.br/pages/perguntas-frequentes" target="_blank" rel="noopener noreferrer">Portal de Dados Abertos do BCB</a>. A frequência e a data de referência variam por série; “consultado às” informa quando esta página fez a consulta, não que o valor seja em tempo real.</p>
+            <p><strong>Limites:</strong> valores podem sofrer atraso ou correção. O BCB informa que não assume responsabilidade por defasagens, erros ou outras deficiências de séries cujas fontes sejam externas, nem por perdas ou danos decorrentes do uso dessas informações; consulte o <a href="https://www4.bcb.gov.br/pec/series/port/aviso.asp?frame=1" target="_blank" rel="noopener noreferrer">aviso oficial do SGS</a> e confirme a série e sua data de referência na fonte antes de tomar decisões. O conteúdo é informativo, não é cotação negociável, oferta, recomendação de investimento ou orientação financeira.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Onde consultar -->
+      <section class="obs-section section-sand" id="fontes" aria-labelledby="fontes-title">
+        <div class="container">
+          <div class="obs-head">
+            <p class="eyebrow eyebrow-light"><span></span> Onde consultar</p>
+            <h2 id="fontes-title">Procure a cotação <em>que você precisa.</em></h2>
+            <p>Escolha o produto e a região: a lista mostra quais fontes publicam aquela cotação e leva direto à página certa. As cotações são de cada fonte e devem ser consultadas lá.</p>
+          </div>
+
+          <form class="mkt-filters" data-filtros role="search" aria-label="Filtrar fontes de cotação">
+            <div class="mkt-search">
+              <label for="mkt-busca" class="sr-only">Buscar fonte ou produto</label>
+              <input id="mkt-busca" name="q" type="search" placeholder="Buscar: boi gordo, bezerro, soja, Juína…" autocomplete="off">
+            </div>
+            <div class="mkt-chips" role="group" aria-label="Produto" data-chips></div>
+            <div class="mkt-region">
+              <label for="mkt-regiao">Região</label>
+              <select id="mkt-regiao" name="regiao" data-regiao>
+                <option value="">Todas</option>
+              </select>
+            </div>
+          </form>
+          <p class="mkt-count" data-contagem aria-live="polite"></p>
+          <div class="mkt-sources" data-fontes>
+            <noscript><p class="mkt-noscript">Ative o JavaScript para filtrar as fontes. Principais: <a href="https://www.scotconsultoria.com.br/cotacoes/boi-gordo/">Scot Consultoria</a>, <a href="https://www.agrolink.com.br/regional/mt/juina/cotacoes">Agrolink Juína</a>, <a href="https://www.imea.com.br/imea-site/relatorios-mercado">IMEA</a>, <a href="https://www.cepea.org.br/br/indicador/boi-gordo.aspx">CEPEA</a>.</p></noscript>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Calculadoras -->
+      <section class="obs-section section-light" id="calculadoras" aria-labelledby="calc-title">
+        <div class="container">
+          <div class="obs-head">
+            <p class="eyebrow eyebrow-light"><span></span> Calculadoras</p>
+            <h2 id="calc-title">Faça a conta <em>com os seus números.</em></h2>
+            <p>Use os preços que você consultou nas fontes acima. Os cálculos são feitos no seu aparelho; nada é enviado.</p>
+          </div>
+
+          <div class="mkt-calc-grid">
+            <!-- Variação -->
+            <form class="mkt-calc" data-calc="variacao" aria-labelledby="calc-var-t">
+              <h3 id="calc-var-t">Variação de preço</h3>
+              <p class="mkt-calc-desc">Compare duas cotações do mesmo produto, como a desta semana e a da semana passada.</p>
+              <div class="mkt-fields">
+                <label>Preço anterior<input name="anterior" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 330"></label>
+                <label>Preço atual<input name="atual" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 342,50"></label>
+                <label class="mkt-span2">Unidade
+                  <select name="unidade">
+                    <option value="R$/@">R$ por arroba (@)</option>
+                    <option value="R$/saca">R$ por saca de 60 kg</option>
+                    <option value="R$/cabeça">R$ por cabeça</option>
+                    <option value="R$/kg">R$ por kg</option>
+                    <option value="R$/t">R$ por tonelada</option>
+                    <option value="">Outra</option>
+                  </select>
+                </label>
+              </div>
+              <output class="mkt-result" data-resultado aria-live="polite">Preencha os dois preços.</output>
+            </form>
+
+            <!-- Relação de troca: reposição -->
+            <form class="mkt-calc" data-calc="troca-boi" aria-labelledby="calc-troca-t">
+              <h3 id="calc-troca-t">Relação de troca · reposição</h3>
+              <p class="mkt-calc-desc">Quantas arrobas de boi gordo pagam um animal de reposição. Quanto menor, melhor para quem compra.</p>
+              <div class="mkt-fields">
+                <label class="mkt-span2">Categoria
+                  <select name="categoria">
+                    <option value="6.5">Desmama · 6,5 @ (195 kg)</option>
+                    <option value="8" selected>Bezerro · 8 @ (240 kg)</option>
+                    <option value="10">Garrote · 10 @ (300 kg)</option>
+                    <option value="12.5">Boi magro · 12,5 @ (375 kg)</option>
+                    <option value="outro">Outro peso</option>
+                  </select>
+                </label>
+                <label data-peso-outro hidden>Peso do animal (@)<input name="arrobas" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 9"></label>
+                <label>Animal de reposição (R$/cabeça)<input name="reposicao" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 3900"></label>
+                <label>Boi gordo (R$/@)<input name="boi" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 340"></label>
+              </div>
+              <output class="mkt-result" data-resultado aria-live="polite">Preencha os preços do animal e do boi gordo.</output>
+            </form>
+
+            <!-- Relação de troca: grãos x insumo -->
+            <form class="mkt-calc" data-calc="troca-graos" aria-labelledby="calc-graos-t">
+              <h3 id="calc-graos-t">Relação de troca · grãos e insumos</h3>
+              <p class="mkt-calc-desc">Quantas sacas de grão pagam uma tonelada de fertilizante, calcário ou outro insumo.</p>
+              <div class="mkt-fields">
+                <label>Grão
+                  <select name="grao">
+                    <option value="soja">Soja</option>
+                    <option value="milho">Milho</option>
+                  </select>
+                </label>
+                <label>Preço do grão (R$/saca)<input name="graoPreco" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 120"></label>
+                <label>Insumo<input name="insumo" type="text" maxlength="40" placeholder="Ex.: fertilizante NPK"></label>
+                <label>Preço do insumo (R$/t)<input name="insumoPreco" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 3200"></label>
+              </div>
+              <output class="mkt-result" data-resultado aria-live="polite">Preencha os preços do grão e do insumo.</output>
+            </form>
+
+            <!-- Valor do animal -->
+            <form class="mkt-calc" data-calc="animal" aria-labelledby="calc-animal-t">
+              <h3 id="calc-animal-t">Valor do animal pelo peso</h3>
+              <p class="mkt-calc-desc">Converte peso vivo em arrobas de carcaça e estima o valor pela cotação da arroba.</p>
+              <div class="mkt-fields">
+                <label>Peso vivo (kg)<input name="peso" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 540"></label>
+                <label>Rendimento de carcaça (%)<input name="rendimento" type="number" inputmode="decimal" step="any" min="1" max="100" value="52"></label>
+                <label class="mkt-span2">Cotação (R$/@)<input name="preco" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 340"></label>
+              </div>
+              <output class="mkt-result" data-resultado aria-live="polite">Preencha o peso e a cotação.</output>
+            </form>
+
+            <!-- Saca x tonelada -->
+            <form class="mkt-calc" data-calc="saca" aria-labelledby="calc-saca-t">
+              <h3 id="calc-saca-t">Saca e tonelada</h3>
+              <p class="mkt-calc-desc">Converte preços entre saca de 60 kg e tonelada, e quantidades entre sacas e toneladas.</p>
+              <div class="mkt-fields">
+                <label>Preço (R$/saca 60 kg)<input name="precoSaca" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 120"></label>
+                <label>Produção (sacas)<input name="sacas" type="number" inputmode="decimal" step="any" min="0" placeholder="Ex.: 3000"></label>
+              </div>
+              <output class="mkt-result" data-resultado aria-live="polite">Preencha o preço ou a quantidade de sacas.</output>
+            </form>
+          </div>
+          <p class="mkt-calc-note">1 arroba = 15 kg de carcaça · 1 saca = 60 kg · rendimento de carcaça típico de bovinos: 50% a 55% (varia com raça, sexo e acabamento).</p>
+        </div>
+      </section>
+
+      <!-- 4. Minhas cotações -->
+      <section class="obs-section section-dark" id="minhas-cotacoes" aria-labelledby="minhas-title">
+        <div class="container">
+          <div class="obs-head obs-head-dark">
+            <p class="eyebrow"><span></span> Acompanhe a variação</p>
+            <h2 id="minhas-title">Minhas <em>cotações.</em></h2>
+            <p>Anote as cotações que você consultar e veja a variação de uma para a outra. Fica salvo só neste navegador; baixe a planilha para guardar.</p>
+          </div>
+
+          <form class="mkt-log-form" data-log-form>
+            <label>Data<input name="data" type="date" required></label>
+            <label>Produto
+              <select name="produto" required>
+                <option value="Boi gordo">Boi gordo</option>
+                <option value="Vaca gorda">Vaca gorda</option>
+                <option value="Novilha gorda">Novilha gorda</option>
+                <option value="Bezerro">Bezerro</option>
+                <option value="Garrote">Garrote</option>
+                <option value="Boi magro">Boi magro</option>
+                <option value="Soja">Soja</option>
+                <option value="Milho">Milho</option>
+                <option value="Café">Café</option>
+                <option value="Fertilizante">Fertilizante</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </label>
+            <label>Praça ou fonte<input name="praca" type="text" maxlength="50" list="mkt-pracas" placeholder="Ex.: Juína · Agrolink" required></label>
+            <label>Preço<input name="preco" type="number" inputmode="decimal" step="any" min="0" required placeholder="Ex.: 342,50"></label>
+            <label>Unidade
+              <select name="unidade">
+                <option value="R$/@">R$/@</option>
+                <option value="R$/saca">R$/saca</option>
+                <option value="R$/cabeça">R$/cabeça</option>
+                <option value="R$/kg">R$/kg</option>
+                <option value="R$/t">R$/t</option>
+              </select>
+            </label>
+            <button class="button button-gold" type="submit">Anotar <span aria-hidden="true">+</span></button>
+            <datalist id="mkt-pracas">
+              <option value="Juína · Agrolink"></option>
+              <option value="MT Norte · Scot"></option>
+              <option value="MT Sudoeste · Scot"></option>
+              <option value="MT Cuiabá · Scot"></option>
+              <option value="MT Sudeste · Scot"></option>
+              <option value="MT · IMEA"></option>
+              <option value="Indicador CEPEA"></option>
+              <option value="Frigorífico local"></option>
+            </datalist>
+          </form>
+
+          <div class="mkt-log-toolbar">
+            <label>Mostrar
+              <select data-log-filtro><option value="">Todos os produtos</option></select>
+            </label>
+            <div class="mkt-log-actions">
+              <button class="button button-ghost" type="button" data-log-csv>Baixar planilha (CSV)</button>
+              <button class="mkt-link-btn" type="button" data-log-limpar>Apagar tudo</button>
+            </div>
+          </div>
+          <div class="mkt-table-wrap">
+            <table class="mkt-table">
+              <caption class="sr-only">Cotações anotadas, da mais recente para a mais antiga, com a variação em relação à anotação anterior do mesmo produto e praça</caption>
+              <thead><tr><th scope="col">Data</th><th scope="col">Produto</th><th scope="col">Praça ou fonte</th><th scope="col" class="num">Preço</th><th scope="col" class="num">Variação</th><th scope="col"><span class="sr-only">Ações</span></th></tr></thead>
+              <tbody data-log-corpo></tbody>
+            </table>
+          </div>
+          <p class="mkt-log-empty" data-log-vazio>Nenhuma cotação anotada ainda. Comece pela praça que você acompanha.</p>
+        </div>
+      </section>
+
+      <!-- 5. Como usar -->
+      <section class="obs-section section-light" id="como-usar" aria-labelledby="uso-title">
+        <div class="container mkt-use-grid">
+          <div class="obs-head">
+            <p class="eyebrow eyebrow-light"><span></span> Como usar e limites</p>
+            <h2 id="uso-title">Informação de mercado, <em>com a fonte.</em></h2>
+          </div>
+          <ul class="mkt-use-list">
+            <li><strong>As cotações são de cada fonte.</strong> Este site não copia nem republica preços de terceiros: ele aponta onde consultá-los. A Scot Consultoria, por exemplo, não autoriza a reprodução das suas cotações.</li>
+            <li><strong>Cotação é referência, não preço garantido.</strong> O valor de cada negócio depende do frigorífico, da trading, do prazo, da qualidade e do frete.</li>
+            <li><strong>Compare sempre a mesma praça e a mesma unidade.</strong> Arroba à vista não se compara com arroba a prazo, nem saca com tonelada.</li>
+            <li><strong>Séries automáticas</strong> vêm do Banco Central (SGS), seguem a frequência própria de cada série e podem ter defasagem ou correção. Não são cotações em tempo real nem recomendação financeira; consulte as datas, a fonte e os limites indicados acima.</li>
+            <li><strong>Outras cotações.</strong> Scot Consultoria, Agrolink, IMEA, CEPEA, Notícias Agrícolas, CONAB e MSN são links para consulta nos sites de origem. Este site não coleta nem republica automaticamente os preços dessas fontes; aplicam-se os termos e condições definidos por cada uma.</li>
+            <li><strong>Conhece uma fonte útil?</strong> <a href="https://wa.me/5566996448934?text=Ol%C3%A1%2C%20gostaria%20de%20sugerir%20uma%20fonte%20para%20a%20p%C3%A1gina%20de%20mercado." data-wa="Olá, gostaria de sugerir uma fonte para a página de mercado." target="_blank" rel="noopener noreferrer">Sugira pelo WhatsApp ↗</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <a class="brand-lockup footer-lockup" href="index.html"><img src="assets/brand/briefing-tecnico-marca.svg" alt="" width="34" height="36" loading="lazy"><span>Briefing <strong>Técnico</strong></span></a>
+        <p>Séries do Banco Central (SGS) · Links para fontes originais de cotações · Dados informativos</p>
+        <a href="#conteudo">Voltar ao início ↑</a>
+        <small>© <span data-year>2026</span> Briefing Técnico. Informações sujeitas a confirmação.</small>
+      </div>
+      <div class="container rodape-legal">
+        <p>Responsável pelo conteúdo: Rafael da Silva Guimarães · Juína, MT · WhatsApp (66) 99644-8934 · <a href="privacidade.html">Privacidade e créditos</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

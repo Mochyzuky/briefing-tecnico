@@ -1,0 +1,143 @@
+/* ==========================================================================
+   PERFECT PROTECTION · perfil da empresa (v4 · 27/10/2026)
+   Carregado em perfect-protection.html e index.html, depois de styles.css,
+   navegacao.css e ajustes.css.
+     1. Abertura com mosaico de fotos (.pp-hero-mosaic)
+     2. Perfil da empresa: ficha, compromissos da marca e detalhes (#sobre)
+     3. Card da Perfect Protection na página inicial (.porta-pp)
+   As fotos ficam em assets/perfect-protection/perfil/ e já são cortadas na
+   proporção de cada moldura, então a imagem aparece inteira, sem cortes extras.
+   ========================================================================== */
+
+/* 1. Abertura · mosaico ---------------------------------------------------- */
+.pp-hero-mosaic {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  justify-self: end;
+  width: min(100%, 560px);
+  aspect-ratio: 560 / 436;
+}
+.pp-hero-mosaic figure { position: relative; margin: 0; overflow: hidden; background: #111c2c; border: 1px solid rgba(79,176,236,.28); }
+.pp-hero-mosaic .pp-mosaic-main { grid-row: 1 / span 2; }
+.pp-hero-mosaic figure img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.pp-hero-mosaic figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  max-width: calc(100% - 20px);
+  padding: 5px 9px;
+  color: #fff;
+  background: rgba(11,20,36,.82);
+  border-left: 2px solid #e3262b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.pp-mosaic-seal { position: absolute; z-index: 1; top: 12px; left: 12px; width: 52px; height: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.4)); }
+
+/* 2. Perfil da empresa ------------------------------------------------------ */
+.pp-profile { padding: 86px 0 92px; }
+.pp-profile-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 56px; }
+
+.pp-profile-card {
+  position: relative;
+  padding: 34px 30px 30px;
+  background: linear-gradient(180deg, #0e1a2d 0%, #0b1424 100%);
+  border: 1px solid rgba(79,176,236,.25);
+  border-top: 3px solid var(--pp-blue);
+}
+.pp-profile-card::before { position: absolute; top: -3px; left: 30px; width: 56px; height: 3px; background: #e3262b; content: ""; }
+.pp-profile-logo { width: min(100%, 200px); height: auto; margin: 0 auto 16px; }
+.pp-profile-card > p.pp-profile-tagline { margin: 0 0 24px; color: #fff; font-size: 19px; font-weight: 600; letter-spacing: -.01em; line-height: 1.35; text-align: center; }
+.pp-profile-facts { margin: 0 0 24px; border-top: 1px solid rgba(255,255,255,.1); }
+.pp-profile-facts > div { display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 12px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+.pp-profile-facts dt { padding-top: 2px; color: var(--pp-light-blue); font-size: 10px; font-weight: 700; letter-spacing: .14em; line-height: 1.5; text-transform: uppercase; }
+.pp-profile-facts dd { margin: 0; color: rgba(255,255,255,.84); font-size: 13px; line-height: 1.5; }
+.pp-profile-facts a { color: #fff; text-decoration-color: rgba(79,176,236,.7); text-underline-offset: 3px; }
+.pp-profile-facts a:hover { color: var(--pp-light-blue); }
+.pp-profile-actions { display: grid; gap: 10px; }
+.pp-profile-actions .button { width: 100%; }
+
+.pp-profile-head { margin-bottom: 24px; }
+.pp-profile-head h2 { margin: 0; }
+.pp-segments a {
+  padding: 8px 12px;
+  color: rgba(255,255,255,.86);
+  border: 1px solid rgba(79,176,236,.35);
+  font-size: 11px;
+  text-decoration: none;
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+.pp-segments a:hover { color: var(--pp-night); background: var(--pp-light-blue); border-color: var(--pp-light-blue); }
+.pp-segments a:focus-visible { outline: 3px solid var(--pp-light-blue); outline-offset: 2px; }
+
+/* Compromissos da marca */
+.pp-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin: 64px 0 0; padding: 0; list-style: none; }
+.pp-pillars li { padding: 22px 20px 24px; background: #0d1828; border: 1px solid rgba(79,176,236,.2); }
+.pp-pillars svg { display: block; width: 30px; height: 30px; margin-bottom: 14px; color: var(--pp-light-blue); }
+.pp-pillars b { display: block; margin-bottom: 6px; color: #fff; font-size: 12px; letter-spacing: .08em; line-height: 1.4; text-transform: uppercase; }
+.pp-pillars span { display: block; color: rgba(255,255,255,.66); font-size: 12px; line-height: 1.55; }
+
+/* Detalhes de acabamento */
+.pp-details { margin-top: 72px; }
+.pp-details-head { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: end; gap: 14px 56px; margin-bottom: 26px; }
+.pp-details-head .eyebrow { grid-column: 1 / -1; margin: 0; }
+.pp-details-head h3 { margin: 0; font-size: clamp(26px, 3vw, 34px); font-weight: 600; letter-spacing: -.04em; line-height: 1.15; }
+.pp-details-head h3 em { color: var(--pp-light-blue); font-style: normal; }
+.pp-details-head > p:not(.eyebrow) { margin: 0; color: rgba(255,255,255,.68); font-size: 14px; }
+.pp-details-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.pp-details-grid figure { margin: 0; background: #0b1424; border: 1px solid rgba(79,176,236,.2); }
+.pp-details-grid img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.pp-details-grid figcaption { padding: 14px 16px 18px; }
+.pp-details-grid figcaption b { display: block; margin-bottom: 4px; color: #fff; font-size: 14px; line-height: 1.35; }
+.pp-details-grid figcaption span { display: block; color: rgba(255,255,255,.66); font-size: 12px; line-height: 1.55; }
+
+/* 3. Card da página inicial ------------------------------------------------ */
+.porta-pp { border-top: 3px solid var(--pp-blue); text-decoration: none; }
+.porta-pp:hover { border-color: rgba(20,121,185,.55); border-top-color: var(--pp-blue); }
+.porta-pp .porta-topo { color: #fff; }
+.porta-pp .porta-topo::after { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,20,36,0) 30%, rgba(11,20,36,.85) 100%); content: ""; }
+.porta-pp .porta-topo > span { z-index: 1; }
+.porta-pp .porta-topo img.porta-selo { inset: 14px auto auto 14px; z-index: 1; width: 46px; height: auto; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0,0,0,.4)); }
+.porta-marca { display: block; margin-bottom: 8px; color: #1479b9; font-size: 11px; font-weight: 700; letter-spacing: .14em; line-height: 1.5; text-transform: uppercase; }
+.porta-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 20px; }
+.porta-tags span { padding: 4px 9px; color: #13213a; background: #eef4fa; border: 1px solid rgba(20,121,185,.25); font-size: 12px; line-height: 1.4; }
+.porta-pp .porta-seta { color: #1479b9; }
+.porta-pp:hover .porta-seta, .porta-pp:focus-visible .porta-seta { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Telas menores ------------------------------------------------------------ */
+@media (max-width: 1100px) {
+  .pp-details-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .pp-profile-grid { grid-template-columns: 1fr; gap: 36px; }
+  .pp-profile-card { order: 2; max-width: 520px; }
+}
+@media (max-width: 680px) {
+  .pp-hero-mosaic { justify-self: center; width: min(100%, 440px); }
+  .pp-hero-mosaic figcaption { bottom: 6px; left: 6px; max-width: calc(100% - 12px); padding: 4px 7px; font-size: 9px; letter-spacing: .06em; }
+  .pp-mosaic-seal { top: 8px; left: 8px; width: 40px; }
+  .pp-profile { padding: 64px 0 70px; }
+  .pp-profile-card { padding: 28px 20px 22px; }
+  .pp-profile-facts > div { grid-template-columns: 1fr; gap: 2px; }
+  .pp-pillars { margin-top: 48px; gap: 8px; }
+  .pp-pillars li { display: grid; grid-template-columns: 28px minmax(0, 1fr); column-gap: 14px; padding: 16px 16px 17px; }
+  .pp-pillars svg { grid-row: 1 / span 2; width: 26px; height: 26px; margin: 0; }
+  .pp-details { margin-top: 56px; }
+  .pp-details-head { grid-template-columns: 1fr; }
+  .pp-details-grid { gap: 10px; }
+  .pp-details-grid figcaption { padding: 10px 11px 13px; }
+  .pp-details-grid figcaption b { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pp-segments a { transition: none; }
+}
+@media print {
+  .pp-hero-mosaic, .pp-details-grid figure { break-inside: avoid; }
+  .pp-profile-actions { display: none; }
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11191b">
+    <meta name="robots" content="noindex">
+    <title>Página não encontrada | Briefing Técnico</title>
+    <style>
+      :root { --night: #11191b; --gold: #d8bd83; --white: #fffefa; --muted: rgba(255,254,250,.72); }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0; display: grid; place-items: center; padding: 32px 16px;
+        color: var(--white); background: radial-gradient(circle at 20% 10%, #1f2d30 0, var(--night) 60%);
+        font: 16px/1.6 "Segoe UI", "Helvetica Neue", sans-serif; -webkit-font-smoothing: antialiased;
+      }
+      main { width: min(560px, 100%); text-align: center; }
+      .code { margin: 0; color: var(--gold); font-size: clamp(64px, 18vw, 120px); font-weight: 300; line-height: 1; letter-spacing: .04em; }
+      h1 { margin: 18px 0 10px; font-size: clamp(22px, 5vw, 30px); font-weight: 600; }
+      p { margin: 0 auto 28px; max-width: 44ch; color: var(--muted); }
+      nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+      a {
+        display: inline-flex; align-items: center; min-height: 46px; padding: 0 20px; border-radius: 999px;
+        color: var(--white); border: 1px solid rgba(255,254,250,.28); font-size: 14px; font-weight: 600; text-decoration: none;
+        transition: border-color .18s ease, color .18s ease, background .18s ease;
+      }
+      a:hover, a:focus-visible { color: var(--night); background: var(--gold); border-color: var(--gold); outline: none; }
+      a.primary { color: var(--night); background: var(--gold); border-color: var(--gold); }
+      a.primary:hover, a.primary:focus-visible { background: var(--white); border-color: var(--white); }
+      .brand { margin-top: 40px; color: var(--muted); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+      .brand strong { color: var(--gold); font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="code" aria-hidden="true">404</p>
+      <h1>Página não encontrada</h1>
+      <p>O endereço pode ter mudado ou foi digitado com algum erro. Escolha um dos caminhos abaixo para continuar.</p>
+      <nav aria-label="Páginas principais">
+        <a class="primary" data-base href="index.html">Página inicial</a>
+        <a data-base href="briefing.html">Briefing Técnico · Pesquisa</a>
+        <a data-base href="scr.html">Produtor rural</a>
+        <a data-base href="perfect-protection.html">Perfect Protection · Aviação</a>
+        <a data-base href="mercado.html">Mercado</a>
+        <a data-base href="privacidade.html">Privacidade e créditos</a>
+      </nav>
+      <p class="brand">Briefing <strong>Técnico</strong> · Juína, MT</p>
+    </main>
+    <script>
+      /* No GitHub Pages de projeto (usuario.github.io/repositorio/), esta página pode ser mostrada em
+         qualquer endereço; os links são ajustados para a pasta raiz do site. */
+      (function () {
+        var partes = location.pathname.split("/").filter(Boolean);
+        var base = /\.github\.io$/i.test(location.hostname) && partes.length ? "/" + partes[0] + "/" : "/";
+        if (location.protocol === "file:") return;
+        document.querySelectorAll("a[data-base]").forEach(function (a) { a.href = base + a.getAttribute("href"); });
+      })();
+    </script>
+  </body>
+</html>

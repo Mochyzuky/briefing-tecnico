@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11191b">
+    <meta name="description" content="Briefing Técnico: ciência, território e ferramentas para organizar e visualizar dados, com fontes e limites claramente identificados.">
+    <title>Briefing Técnico · Pesquisa e interesses</title>
+    <link rel="icon" href="assets/brand/briefing-tecnico-marca.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=briefing-areas-20261026">
+    <link rel="stylesheet" href="navegacao.css?v=briefing-areas-20261026">
+    <link rel="stylesheet" href="pesquisa-abas.css?v=briefing-fontes-20261026">
+    <link rel="stylesheet" href="plotagem.css?v=capa-20261027c">
+    <script src="script.js?v=locations-br-20261022" defer></script>
+    <script src="navegacao.js?v=briefing-areas-20261026" defer></script>
+    <script src="data/fontes-pesquisa.js?v=briefing-fontes-20261026" defer></script>
+    <script src="pesquisa-abas.js?v=briefing-fontes-20261026" defer></script>
+    <script src="plotagem.js?v=plotagem-20261026" defer></script>
+  </head>
+  <body data-fontes="briefing">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand-lockup" href="index.html" aria-label="Briefing Técnico, página inicial">
+          <img src="assets/brand/briefing-tecnico-marca.svg" alt="" width="44" height="46">
+          <span>Briefing <strong>Técnico</strong></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span>Áreas</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+        <nav class="main-nav" id="main-navigation" aria-label="Áreas principais">
+          <a class="topico" href="briefing.html" aria-current="page">Briefing Técnico</a>
+          <a class="topico" href="scr.html">Produtor rural</a>
+          <a class="topico" href="perfect-protection.html">Perfect Protection · Aviação</a>
+          <a class="topico" href="index.html#janela-contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="local-nav" aria-label="Seções do Briefing Técnico">
+      <div class="container local-nav-row">
+        <span class="local-nav-title">Briefing Técnico</span>
+        <a href="#interesses">Temas</a>
+        <a href="#plotagem">Plotagem de dados</a>
+        <a href="#fontes">Fontes</a>
+      </div>
+    </nav>
+
+    <main id="conteudo">
+      <section class="pesquisa-abertura briefing-opening briefing-com-capa" aria-labelledby="briefing-title">
+        <img class="briefing-capa-foto" src="assets/briefing-capa.jpg" alt="" width="1600" height="640" fetchpriority="high">
+        <div class="container">
+          <p class="eyebrow"><span></span> Pesquisa independente</p>
+          <h1 id="briefing-title">Ideias, evidências<br>e <em>dados visíveis.</em></h1>
+          <p>Ciência, território e dados, em linguagem simples. Um espaço do Briefing Técnico para assuntos gerais, leituras científicas e ferramentas de exploração.</p>
+          <p>As três áreas ficam no mesmo site, mas cada uma trata do seu assunto: <strong>Briefing Técnico</strong> (pesquisa e temas gerais), <a href="scr.html"><strong>Produtor rural</strong></a> (assuntos rurais) e <a href="perfect-protection.html"><strong>Perfect Protection</strong></a> (aviação).</p>
+          <ul class="briefing-principles" aria-label="Princípios do Briefing Técnico">
+            <li><b>Fonte sempre à vista.</b> Cada informação indica de onde veio.</li>
+            <li><b>Limites ditos com clareza.</b> Informação não substitui orientação oficial.</li>
+            <li><b>Seus dados ficam com você.</b> A plotagem roda no seu navegador.</li>
+            <li><b>Linguagem simples.</b> Termos técnicos vêm explicados.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="briefing-interests" id="interesses" aria-labelledby="interests-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-light"><span></span> Conhecimento e território</p>
+            <h2 id="interests-title">Explore por <em>assunto.</em></h2>
+            <p>Leituras e recursos de interesse geral, separados das páginas de serviços rurais e de produtos para aviação.</p>
+          </div>
+          <div class="briefing-topic-grid">
+            <a class="briefing-topic" href="diamantes.html">
+              <span>Geociências · Juína e Kankan</span>
+              <h3>Diamantes e o interior da Terra</h3>
+              <p>Síntese de uma pesquisa científica sobre diamantes sublitosféricos e o ciclo dos supercontinentes, com link para o artigo original.</p>
+              <strong>Ver estudo <span aria-hidden="true">→</span></strong>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="plotter-section" id="plotagem" aria-labelledby="plotter-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow"><span></span> Ferramenta local · sem envio de dados</p>
+            <h2 id="plotter-title">Monte um gráfico<br><em>com seus dados.</em></h2>
+            <p>Cole uma pequena tabela ou use o exemplo. O gráfico é criado neste navegador; os dados não são enviados nem salvos pelo site.</p>
+          </div>
+          <form class="plotter-form" data-plotter-form>
+            <div class="plotter-fields">
+              <label for="plotter-title-input">Título do gráfico
+                <input id="plotter-title-input" name="chartTitle" type="text" maxlength="90" value="Exemplo de dados" autocomplete="off">
+              </label>
+              <label for="plotter-x-label">Eixo horizontal
+                <input id="plotter-x-label" name="xLabel" type="text" maxlength="40" value="Categoria" autocomplete="off">
+              </label>
+              <label for="plotter-y-label">Eixo vertical
+                <input id="plotter-y-label" name="yLabel" type="text" maxlength="40" value="Valor" autocomplete="off">
+              </label>
+              <label for="plotter-type">Tipo de gráfico
+                <select id="plotter-type" name="chartType">
+                  <option value="bar">Colunas</option>
+                  <option value="line">Linha</option>
+                </select>
+              </label>
+            </div>
+            <label class="plotter-data-label" for="plotter-data">Dados (uma linha por ponto; primeira linha com os nomes das colunas)
+              <textarea id="plotter-data" name="data" rows="8" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="plotter-help">Categoria;Valor
+Jan;12
+Fev;18
+Mar;15
+Abr;24
+Mai;21</textarea>
+            </label>
+            <p class="plotter-help" id="plotter-help">Formato: <code>Categoria;Valor</code>. Separe colunas por ponto e vírgula, tabulação ou vírgula. Para decimais com vírgula, use ponto e vírgula entre colunas. Até 50 linhas; não use dados pessoais ou confidenciais.</p>
+            <div class="plotter-actions">
+              <button class="button button-gold" type="submit">Gerar gráfico <span aria-hidden="true">↗</span></button>
+              <button class="plotter-secondary" type="button" data-plotter-sample>Restaurar exemplo</button>
+              <button class="plotter-secondary" type="button" data-plotter-clear>Limpar</button>
+            </div>
+            <p class="plotter-status" data-plotter-status role="status" aria-live="polite">Exibindo dados de exemplo.</p>
+          </form>
+          <div class="plotter-result" data-plotter-result>
+            <div class="plotter-result-head">
+              <h3 data-plotter-heading>Exemplo de dados</h3>
+              <div class="plotter-downloads">
+                <button type="button" class="plotter-secondary" data-plotter-download-svg>Baixar SVG</button>
+                <button type="button" class="plotter-secondary" data-plotter-download-csv>Baixar CSV</button>
+              </div>
+            </div>
+            <div class="plotter-chart" data-plotter-chart aria-label="Gráfico de exemplo"></div>
+            <div class="plotter-table-wrap">
+              <table class="plotter-table">
+                <caption class="visually-hidden">Dados representados no gráfico</caption>
+                <thead><tr><th scope="col" data-plotter-x-head>Categoria</th><th scope="col" data-plotter-y-head>Valor</th></tr></thead>
+                <tbody data-plotter-table></tbody>
+              </table>
+            </div>
+            <p class="plotter-note">O gráfico é uma visualização dos valores informados por você; não verifica a fonte, a unidade ou a qualidade dos dados.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="briefing-sources section-light" id="fontes" aria-labelledby="briefing-sources-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-light"><span></span> Consulta e leitura</p>
+            <h2 id="briefing-sources-title">Fontes de interesse<br><em>geral.</em></h2>
+            <p>Referências de geociências e meio ambiente. Cada instituição mantém seus próprios dados e termos de uso.</p>
+          </div>
+          <div class="briefing-questions">
+            <h3>Cinco perguntas antes de confiar</h3>
+            <ol>
+              <li>Quem publicou?</li>
+              <li>De quando é?</li>
+              <li>Vale para o meu lugar?</li>
+              <li>Qual a unidade?</li>
+              <li>Onde está o original?</li>
+            </ol>
+          </div>
+          <div class="research-tabs" id="abas-pesquisa">
+            <noscript><p>Ative o JavaScript para exibir a lista de fontes. Os temas e a ferramenta de gráfico dependem de JavaScript.</p></noscript>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <a class="brand-lockup footer-lockup" href="index.html">
+          <img src="assets/brand/briefing-tecnico-marca.svg" alt="" width="34" height="36" loading="lazy">
+          <span>Briefing <strong>Técnico</strong></span>
+        </a>
+        <p>Pesquisa independente · Ciência · Dados</p>
+        <a href="#conteudo">Voltar ao início ↑</a>
+        <small>© <span data-year>2026</span> Briefing Técnico.</small>
+      </div>
+      <div class="container rodape-legal">
+        <p><a href="scr.html">Produtor rural</a> · <a href="perfect-protection.html">Perfect Protection · Aviação</a> · <a href="privacidade.html">Privacidade e créditos</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

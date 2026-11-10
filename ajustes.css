@@ -1,0 +1,17 @@
+/* Briefing Técnico — identificação, representação e privacidade. */
+.rodape-legal { padding-block: 12px 18px; border-top: 1px solid rgba(255,254,250,.08); }
+.rodape-legal p { margin: 0; color: rgba(255,254,250,.6); font-size: 11px; line-height: 1.6; }
+.rodape-legal p a { color: var(--gold); font-size: inherit; text-decoration: none; }
+.rodape-legal a:hover, .rodape-legal a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+.pp-about-copy > p.pp-representacao { margin: 18px 0 20px; padding: 12px 14px; color: rgba(255,255,255,.78); background: rgba(255,255,255,.04); border-left: 3px solid var(--gold); font-size: 13px; line-height: 1.6; }
+.legal-pagina { padding: 8px 0 72px; background: var(--paper); }
+.legal-pagina .container { max-width: 860px; }
+.legal-bloco { padding: 26px 0; border-top: 1px solid var(--line); }
+.legal-bloco h2 { margin: 0 0 12px; font-size: 22px; letter-spacing: -.02em; }
+.legal-bloco p, .legal-bloco li { color: var(--ink-muted); font-size: 15px; line-height: 1.7; }
+.legal-bloco p { margin: 0 0 12px; }
+.legal-bloco ul { margin: 0 0 12px; padding-left: 20px; }
+.legal-bloco li { margin-bottom: 6px; }
+.legal-bloco strong { color: var(--ink); }
+.legal-bloco a { color: #0b5d8f; }
+.legal-data { margin-top: 24px; color: var(--ink-muted); font-size: 13px; }

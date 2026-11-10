@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11191b">
+    <meta name="description" content="Observatório meteorológico da Briefing Técnico: previsão para Juína, MT, clima observado pelo INMET, El Niño 2026/27, sol e lua e meteorologia aeronáutica — sempre com fonte, data e limites.">
+    <title>Observatório meteorológico · Juína, MT | Briefing Técnico</title>
+    <link rel="icon" href="assets/brand/briefing-tecnico-marca.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=locations-br-20261022">
+    <link rel="stylesheet" href="navegacao.css?v=nav-20261015">
+    <link rel="stylesheet" href="ajustes.css?v=20261021">
+    <script src="data/observatorio-dados.js" defer></script>
+    <script src="script.js?v=locations-br-20261022" defer></script>
+    <script src="navegacao.js?v=nav-20261015" defer></script>
+    <script src="observatorio.js?v=weather-location-v2" defer></script>
+  </head>
+  <body class="obs-page">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand-lockup" href="index.html" aria-label="Briefing Técnico, página inicial">
+          <img src="assets/brand/briefing-tecnico-marca.svg" alt="" width="44" height="46">
+          <span>Briefing <strong>Técnico</strong></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span>Assuntos</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+        <nav class="main-nav" id="main-navigation" aria-label="Áreas principais">
+          <a class="topico" href="briefing.html">Briefing Técnico</a>
+          <a class="topico" href="scr.html" aria-current="page">Produtor rural</a>
+          <a class="topico" href="perfect-protection.html">Perfect Protection · Aviação</a>
+          <a class="topico" href="index.html#janela-contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="obs-subnav" aria-label="Seções da área do produtor rural">
+      <div class="container obs-subnav-row">
+        <a href="pesquisa.html">Pesquisa rural</a>
+        <a href="mercado.html">Mercado rural</a>
+        <a href="scr.html">Produtor rural</a>
+        <a href="#previsao">Previsão</a>
+        <a href="#sol-lua">Sol e Lua</a>
+        <a href="#clima">Clima observado</a>
+        <a href="#regiao">Região</a>
+        <a href="#el-nino">El Niño</a>
+        <a href="perfect-protection.html#aviacao">Aviação · Perfect Protection</a>
+        <a href="#fotografias">Fotografias</a>
+        <a href="#fontes">Fontes e método</a>
+      </div>
+    </nav>
+
+    <main id="conteudo" data-astro>
+      <section class="obs-hero">
+        <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+        <div class="container obs-hero-grid">
+          <div class="obs-hero-copy">
+            <p class="eyebrow"><span></span> Observatório · Juína, Mato Grosso</p>
+            <h1>Tempo, clima<br>e <em>contexto.</em></h1>
+            <p class="hero-description">Previsão atualizada, observações de estações do INMET, El Niño, sol e lua e ferramentas de meteorologia. Cada informação traz a fonte, a data e os limites de uso.</p>
+            <div class="hero-actions">
+              <a class="button button-gold" href="#previsao">Ver a previsão <span aria-hidden="true">↓</span></a>
+              <a class="inline-link" href="#fontes">Como tratamos os dados <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="obs-status" aria-label="Resumo de hoje">
+            <article class="obs-tile">
+              <span>Agora · previsão de modelo</span>
+              <strong data-hero="temp">—</strong>
+              <p data-hero="cond">Carregando…</p>
+            </article>
+            <article class="obs-tile">
+              <span>Sol hoje · Juína</span>
+              <strong><span data-sun-rise>—</span> – <span data-sun-set>—</span></strong>
+              <p>nascer e pôr do sol (horário de Cuiabá)</p>
+            </article>
+            <article class="obs-tile">
+              <span>Lua hoje</span>
+              <strong data-moon-name>—</strong>
+              <p data-moon-illum></p>
+            </article>
+            <article class="obs-tile obs-tile-accent">
+              <span>El Niño 2026/27</span>
+              <strong>Em curso</strong>
+              <p>Painel nº 4 · setembro de 2026</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PREVISÃO ===================== -->
+      <section class="weather-section obs-section" id="previsao" aria-labelledby="previsao-title" data-weather data-weather-count="7" data-weather-detail>
+        <div class="container">
+          <div class="weather-heading">
+            <div>
+              <p class="eyebrow"><span></span> 01 · Previsão</p>
+              <h2 id="previsao-title">Tempo em <em data-weather-location-label>Juína, MT</em>.</h2>
+              <p>Consulte a previsão em municípios brasileiros.</p>
+            </div>
+            <button class="weather-refresh" type="button" data-weather-refresh aria-controls="weather-current weather-days">Atualizar previsão <span aria-hidden="true">↻</span></button>
+          </div>
+          <form class="weather-location-form" data-weather-location-form>
+            <fieldset>
+              <legend>Consultar previsão em outro município</legend>
+              <div class="weather-location-brazil">
+                <label>Estado
+                  <select data-location-state required><option value="MT" selected>Mato Grosso</option></select>
+                </label>
+                <label>Cidade ou município
+                  <select data-location-city required><option value="Juína" selected>Juína</option></select>
+                </label>
+              </div>
+              <button class="weather-location-submit" type="submit">Ver previsão nesta localidade <span aria-hidden="true">↗</span></button>
+            </fieldset>
+            <p class="weather-location-message" data-location-message role="status" aria-live="polite">Juína, MT é a localidade inicial. A busca não usa sua localização GPS.</p>
+            <p class="weather-location-scope">A escolha vale só para a previsão de modelo desta visita; ao reabrir a página, a base volta para Juína. Os gráficos históricos do INMET e os cálculos de Sol e Lua continuam referentes a Juína.</p>
+          </form>
+          <p class="weather-status" data-weather-status role="status" aria-live="polite">Carregando a previsão meteorológica…</p>
+          <p class="weather-privacy-note">A lista de municípios brasileiros é fornecida localmente pelo próprio site. A previsão é consultada diretamente no MET Norway, que recebe as coordenadas do município escolhido e seu endereço IP. O site não acessa sua localização GPS.</p>
+
+          <div class="weather-current weather-current-rich" id="weather-current" data-weather-current hidden>
+            <div class="weather-current-main">
+              <div class="weather-current-icon" data-weather-icon aria-hidden="true"></div>
+              <span class="weather-current-label">Próxima condição prevista</span>
+              <strong data-weather-condition></strong>
+              <span class="weather-current-time" data-weather-time></span>
+            </div>
+            <div class="weather-metrics weather-metrics-8">
+              <div><span>Temperatura</span><strong data-weather-temperature></strong></div>
+              <div><span>Umidade relativa</span><strong data-weather-humidity></strong></div>
+              <div><span>Vento (de onde sopra)</span><strong data-weather-wind></strong></div>
+              <div><span>Pressão ao nível do mar</span><strong data-weather-pressure></strong></div>
+              <div><span>Cobertura de nuvens</span><strong data-weather-cloud></strong></div>
+              <div><span>Ponto de orvalho</span><strong data-weather-dewpoint></strong></div>
+              <div><span>Chuva na próxima hora</span><strong data-weather-rain1h></strong></div>
+              <div><span>Fonte</span><strong class="metric-text">MET Norway</strong></div>
+            </div>
+          </div>
+
+          <div class="obs-indicators" data-indicators aria-live="polite" hidden>
+            <h3>Indicadores automáticos do modelo</h3>
+            <ul data-indicators-list></ul>
+            <p>São leituras simples da previsão, não alertas oficiais. Para avisos de risco, consulte o <a href="https://alertas2.inmet.gov.br/" target="_blank" rel="noopener noreferrer">INMET Alertas</a> e a Defesa Civil.</p>
+          </div>
+
+          <figure class="chart-card chart-dark" hidden data-hourly-card>
+            <figcaption>
+              <strong>Próximas 24 horas</strong>
+              <span>Temperatura (linha) e chuva prevista por hora (barras) · horário local da cidade selecionada</span>
+            </figcaption>
+            <div class="chart-box" id="chart-hourly" role="img" aria-label="Gráfico da previsão de temperatura e chuva para as próximas 24 horas"></div>
+            <details class="chart-data">
+              <summary>Ver os valores em tabela</summary>
+              <div class="table-wrap"><table id="table-hourly"><thead><tr><th scope="col">Hora</th><th scope="col">Temperatura</th><th scope="col">Umidade</th><th scope="col">Vento</th><th scope="col">Chuva</th></tr></thead><tbody></tbody></table></div>
+            </details>
+          </figure>
+
+          <h3 class="obs-subhead">Próximos dias</h3>
+          <div class="weather-days weather-days-7" id="weather-days" data-weather-days role="list" aria-label="Previsão para os próximos dias"></div>
+
+          <p class="weather-attribution">
+            Previsão meteorológica: <a href="https://api.met.no/weatherapi/locationforecast/2.0/documentation" target="_blank" rel="noopener noreferrer">MET Norway</a>,
+            licenciados sob <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.
+            Previsão de modelo, não observação de estação nem informação para operação aeronáutica.
+          </p>
+          <p class="weather-attribution">Localidades brasileiras: base <a href="https://github.com/kelvins/municipios-brasileiros" target="_blank" rel="noopener noreferrer">municipios-brasileiros</a>, fornecida localmente sob <a href="data/municipios/LICENCA-MIT.txt">licença MIT</a>.</p>
+          <p class="weather-reference">Para comparação, consulte também a <a href="https://previsaonumerica.cptec.inpe.br/bam/aprec/ams/" target="_blank" rel="noopener noreferrer">previsão numérica do CPTEC/INPE</a> e as <a href="https://mapas.inmet.gov.br/" target="_blank" rel="noopener noreferrer">estações meteorológicas do INMET</a>.</p>
+        </div>
+      </section>
+
+      <!-- ===================== SOL E LUA ===================== -->
+      <section class="obs-section section-light" id="sol-lua" aria-labelledby="sol-title">
+        <div class="container">
+          <div class="obs-head">
+            <p class="eyebrow eyebrow-light"><span></span> 02 · Sol e Lua</p>
+            <h2 id="sol-title">O céu de hoje,<br><em>calculado para Juína.</em></h2>
+            <p>Os horários são calculados no seu navegador para o ponto de referência de Juína, sem consultar serviços externos. A margem típica é de cerca de 1 a 2 minutos; para uso aeronáutico, consulte as publicações oficiais (AISWEB/DECEA).</p>
+          </div>
+          <div class="astro-grid">
+            <div class="astro-tiles">
+              <div class="stat-tile"><span>Nascer do sol</span><strong data-sun-rise>—</strong></div>
+              <div class="stat-tile"><span>Meio-dia solar</span><strong data-sun-noon>—</strong></div>
+              <div class="stat-tile"><span>Pôr do sol</span><strong data-sun-set>—</strong></div>
+              <div class="stat-tile"><span>Duração do dia</span><strong data-sun-length>—</strong></div>
+              <div class="stat-tile"><span>Início do crepúsculo civil</span><strong data-sun-dawn>—</strong></div>
+              <div class="stat-tile"><span>Fim do crepúsculo civil</span><strong data-sun-dusk>—</strong></div>
+            </div>
+            <div class="moon-card">
+              <div class="moon-visual" data-moon-icon role="img" aria-label="Fase atual da Lua, vista do Hemisfério Sul"></div>
+              <div>
+                <span class="moon-label">Lua</span>
+                <strong data-moon-name>—</strong>
+                <p data-moon-illum></p>
+                <ul class="moon-phases" data-moon-phases></ul>
+              </div>
+            </div>
+          </div>
+          <figure class="chart-card">
+            <figcaption>
+              <strong>Duração do dia ao longo do ano</strong>
+              <span>Perto da linha do Equador a variação é pequena: em Juína, de cerca de 11 h 27 min a 12 h 48 min.</span>
+            </figcaption>
+            <div class="chart-box" id="chart-daylength" role="img" aria-label="Curva da duração do dia em Juína ao longo do ano, com o dia de hoje marcado"></div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ===================== CLIMA OBSERVADO ===================== -->
+      <section class="obs-section section-sand" id="clima" aria-labelledby="clima-title">
+        <div class="container">
+          <div class="obs-head">
+            <p class="eyebrow eyebrow-light"><span></span> 03 · Clima observado</p>
+            <h2 id="clima-title">Juína em 2024,<br><em>medido por estação.</em></h2>
+            <p>Dados horários da estação automática A920 do INMET, convertidos para o horário local (UTC−4). Mostramos apenas o que passa por critérios simples de cobertura e deixamos as lacunas visíveis, em vez de preenchê-las.</p>
+          </div>
+
+          <div class="callout" data-coverage-note>
+            <strong>Antes de ler os gráficos</strong>
+            <p>Carregando…</p>
+          </div>
+
+          <div class="kpi-row" data-kpis></div>
+
+          <figure class="chart-card">
+            <figcaption>
+              <strong>Chuva e temperatura por mês</strong>
+              <span>Barras: chuva nos dias com dados · linhas: média das máximas e das mínimas diárias · faixa inferior: horas com dados</span>
+            </figcaption>
+            <div class="chart-box" id="chart-monthly" role="img" aria-label="Gráfico mensal de chuva, temperatura máxima e mínima e cobertura de dados da estação de Juína em 2024"></div>
+            <details class="chart-data">
+              <summary>Ver os valores em tabela</summary>
+              <div class="table-wrap"><table id="table-monthly"><thead><tr><th scope="col">Mês</th><th scope="col">Dados</th><th scope="col">Chuva</th><th scope="col">Dias com chuva ≥ 1 mm</th><th scope="col">Máxima média</th><th scope="col">Mínima média</th><th scope="col">UR mínima média</th></tr></thead><tbody></tbody></table></div>
+            </details>
+          </figure>
+
+          <figure class="chart-card">
+            <figcaption>
+              <strong>Calendário diário</strong>
+              <span>Cada quadrado é um dia de 2024. Quadrados hachurados são dias sem dados confiáveis.</span>
+            </figcaption>
+            <div class="seg" role="group" aria-label="Variável do calendário">
+              <button type="button" data-heat-metric="tmax" aria-pressed="true">Temperatura máxima</button>
+              <button type="button" data-heat-metric="rhmin" aria-pressed="false">Umidade mínima</button>
+              <button type="button" data-heat-metric="rain" aria-pressed="false">Chuva</button>
+            </div>
+            <div class="chart-box" id="chart-heat" role="img" aria-label="Calendário diário de 2024 para a variável selecionada"></div>
+          </figure>
+
+          <div class="chart-pair">
+            <figure class="chart-card">
+              <figcaption>
+                <strong>Ciclo do dia: temperatura</strong>
+                <span>Média por hora local, época chuvosa (jan–mar) e seca (jun–ago)</span>
+              </figcaption>
+              <div class="chart-box" id="chart-diurnal-temp" role="img" aria-label="Temperatura média por hora do dia nas épocas chuvosa e seca"></div>
+            </figure>
+            <figure class="chart-card">
+              <figcaption>
+                <strong>Ciclo do dia: umidade relativa</strong>
+                <span>Média por hora local nas mesmas épocas</span>
+              </figcaption>
+              <div class="chart-box" id="chart-diurnal-rh" role="img" aria-label="Umidade relativa média por hora do dia nas épocas chuvosa e seca"></div>
+            </figure>
+          </div>
+
+          <figure class="chart-card chart-card-wind">
+            <figcaption>
+              <strong>De onde sopra o vento</strong>
+              <span>Frequência por direção e faixa de velocidade, em % das horas com dados (2024)</span>
+            </figcaption>
+            <div class="chart-box" id="chart-windrose" role="img" aria-label="Rosa dos ventos da estação de Juína em 2024"></div>
+          </figure>
+
+          <div class="limits">
+            <h3>O que estes dados não mostram</h3>
+            <ul>
+              <li><strong>Só um ano.</strong> Sem a média de muitos anos (a “normal climatológica”), não dá para dizer se 2024 foi mais seco, mais quente ou mais chuvoso que o habitual.</li>
+              <li><strong>Lacunas.</strong> Boa parte das falhas está entre setembro e dezembro e ocorre sobretudo à noite. Por isso não há mínimas nem chuva confiáveis em setembro, outubro e dezembro, e a chuva de julho, agosto e novembro é parcial.</li>
+              <li><strong>Um ponto.</strong> A estação representa o local onde está instalada; áreas rurais vizinhas podem ter chuva bem diferente.</li>
+              <li><strong>Dados brutos.</strong> São valores publicados pelo INMET, sem validação adicional da Briefing Técnico.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== REGIÃO ===================== -->
+      <section class="obs-section section-light" id="regiao" aria-labelledby="regiao-title">
+        <div class="container">
+          <div class="obs-head">
+            <p class="eyebrow eyebrow-light"><span></span> 04 · Mato Grosso</p>
+            <h2 id="regiao-title">Estações vizinhas,<br><em>mesmo ano.</em></h2>
+            <p>A base de 2024 reúne estações automáticas do INMET em Mato Grosso. Para comparar chuva, usamos só as que têm a série praticamente completa.</p>
+          </div>
+          <figure class="chart-card">
+            <figcaption>
+              <strong>Chuva acumulada em 2024 (mm)</strong>
+              <span>Estações com pelo menos 335 dias de chuva válidos. Juína aparece hachurada por ter dados parciais.</span>
+            </figcaption>
+            <div class="chart-box" id="chart-regional" role="img" aria-label="Chuva acumulada em 2024 em estações de Mato Grosso com série completa"></div>
+          </figure>
+          <h3 class="obs-subhead obs-subhead-light">Estações mais próximas de Juína</h3>
+          <div class="table-wrap">
+            <table class="data-table" id="table-regional">
+              <caption class="sr-only">Estações do INMET mais próximas de Juína, com cobertura e chuva em 2024</caption>
+              <thead><tr><th scope="col">Estação</th><th scope="col">Distância</th><th scope="col">Horas com dados</th><th scope="col">Chuva (dias válidos)</th><th scope="col">Máxima absoluta</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <p class="note-small">Distância em linha reta a partir da estação de Juína. “Chuva” é a soma dos dias com dados; quando os dias válidos são menos de 335, o total é parcial e não deve ser comparado com os demais.</p>
+        </div>
+      </section>
+
+      <!-- ===================== EL NIÑO ===================== -->
+      <section class="obs-section section-dark" id="el-nino" aria-labelledby="elnino-title">
+        <div class="container">
+          <div class="obs-head obs-head-dark">
+            <p class="eyebrow"><span></span> 05 · El Niño</p>
+            <h2 id="elnino-title">El Niño 2026/27:<br><em>o que os boletins dizem.</em></h2>
+            <p>Resumo do Painel El Niño, publicado mensalmente por INMET, INPE, ANA, CEMADEN, SGB, SEDEC e CENSIPAM. Última edição consultada: <strong>nº 4, setembro de 2026</strong>. Há edições mais recentes? Confira nos links abaixo.</p>
+          </div>
+
+          <div class="elnino-status">
+            <div class="elnino-lead">
+              <span class="badge badge-warn">Fenômeno em curso</span>
+              <h3>Condições de El Niño confirmadas em junho de 2026, com intensidade “muito forte” provável.</h3>
+              <ul class="fact-list">
+                <li><strong>Confirmação:</strong> a NOAA declarou o El Niño em 11/06/2026, e o Painel nº 4 registra a confirmação em junho.</li>
+                <li><strong>Oceano:</strong> o boletim da NOAA de 28/09 mostra anomalias positivas de temperatura da superfície do mar superiores a 2 °C (Painel nº 4).</li>
+                <li><strong>Intensidade:</strong> probabilidade superior a 95% de um El Niño muito forte; o painel cita a possibilidade de ser o mais forte desde 1950, com anomalias que podem superar 2,5 °C (Painel nº 4).</li>
+                <li><strong>Duração:</strong> os modelos indicam permanência do fenômeno pelo menos até o início de 2027 (Painel nº 4).</li>
+              </ul>
+            </div>
+            <div class="elnino-timeline" aria-label="Linha do tempo dos boletins">
+              <ol>
+                <li><time datetime="2026-06-11">11 jun 2026</time><span>NOAA declara El Niño</span></li>
+                <li><time datetime="2026-07">jul 2026</time><span>Painel nº 2: previsão ASO com chuva abaixo da faixa normal em grande parte do centro-norte do país</span></li>
+                <li><time datetime="2026-08">ago 2026</time><span>Painel nº 3: previsão SON com chuva abaixo da faixa normal como cenário mais provável, principalmente em MT</span></li>
+                <li><time datetime="2026-09">set 2026</time><span>Painel nº 4: previsão OND com chuva abaixo da média no centro-norte de MT</span></li>
+              </ol>
+            </div>
+          </div>
+
+          <h3 class="obs-subhead">O que os boletins dizem sobre Mato Grosso</h3>
+          <div class="elnino-cards">
+            <article class="info-card">
+              <span>Chuva</span>
+              <h4>Abaixo da média no centro-norte</h4>
+              <p>A previsão sazonal para outubro a dezembro indica chuva abaixo da média no centro-norte de Mato Grosso, e a temperatura tende a ficar acima do normal em praticamente todo o país (Painel nº 4). O boletim de agosto já apontava, para setembro a novembro, chuva abaixo da faixa normal como cenário mais provável, principalmente em Mato Grosso (nº 3).</p>
+            </article>
+            <article class="info-card">
+              <span>Seca</span>
+              <h4>Sem seca predominante</h4>
+              <p>O Painel nº 4 mostra predominância de áreas sem seca em Mato Grosso no Monitor de Secas. Em junho, o Painel nº 2 já destacava que o estado havia ficado livre de seca na última atualização e que a área com seca no Centro-Oeste era quase três vezes menor que em junho de 2023.</p>
+            </article>
+            <article class="info-card">
+              <span>Lavouras e fogo</span>
+              <h4>Semeadura e incêndios pedem atenção</h4>
+              <p>Chuva abaixo da média em Mato Grosso pode dificultar o estabelecimento inicial das culturas de verão e agravar a deficiência hídrica e o risco de incêndios; o retorno das chuvas em novembro deve melhorar a umidade do solo (Painel nº 3). A previsão de risco de fogo do Painel nº 2 já apontava alerta alto sobre o Centro-Oeste, especialmente Mato Grosso.</p>
+            </article>
+          </div>
+
+          <div class="callout callout-dark">
+            <strong>Como interpretar</strong>
+            <p>A previsão sazonal é probabilística e regional: indica tendências para o trimestre, não o que acontecerá em Juína em cada dia. “Centro-norte de Mato Grosso” não é o mesmo que “Juína”, que fica no noroeste do estado. Para decisões de campo, consulte a previsão do dia, o INMET e os técnicos da região.</p>
+          </div>
+
+          <div class="source-links">
+            <a href="https://portal.inmet.gov.br/uploads/notastecnicas/Painel-El-Ni%C3%B1o-4-Edi%C3%A7%C3%A3o-ok.pdf" target="_blank" rel="noopener noreferrer">Painel El Niño nº 4 (set/2026) <span aria-hidden="true">↗</span></a>
+            <a href="https://portal.inmet.gov.br/uploads/notastecnicas/Painel-El-Ni%C3%B1o-3-Edi%C3%A7%C3%A3o.pdf" target="_blank" rel="noopener noreferrer">Painel El Niño nº 3 (ago/2026) <span aria-hidden="true">↗</span></a>
+            <a href="https://dataserver.cptec.inpe.br/dataserver_diptc/web/Painel-Elnino/2026-2027/Painel-El-Nin%CC%83o-2Edi%C3%A7%C3%A3o-Final.pdf" target="_blank" rel="noopener noreferrer">Painel El Niño nº 2 (jul/2026) <span aria-hidden="true">↗</span></a>
+            <a href="https://monitordesecas.ana.gov.br/" target="_blank" rel="noopener noreferrer">Monitor de Secas · ANA <span aria-hidden="true">↗</span></a>
+            <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/" target="_blank" rel="noopener noreferrer">NOAA · ENSO <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== AVIAÇÃO ===================== -->
+      <section class="obs-section section-dark" id="aviacao" aria-labelledby="avi-title">
+        <div class="container">
+          <div class="obs-head obs-head-dark">
+            <p class="eyebrow"><span></span> 06 · Meteorologia aeronáutica</p>
+            <h2 id="avi-title">Aprenda a ler<br><em>um METAR.</em></h2>
+            <p>Mensagens meteorológicas aeronáuticas seguem um formato codificado e padronizado. A ferramenta abaixo traduz um METAR ou SPECI para linguagem comum, com fins educativos. Consulte também os recursos de aviação da <a href="perfect-protection.html#aviacao">Perfect Protection</a>.</p>
+          </div>
+
+          <div class="avi-grid">
+            <article class="info-card info-card-dark"><span>METAR</span><h4>Observação</h4><p>Relato regular das condições observadas em um aeródromo (vento, visibilidade, nuvens, temperatura e pressão).</p></article>
+            <article class="info-card info-card-dark"><span>SPECI</span><h4>Observação especial</h4><p>Emitido quando há mudança significativa entre dois METAR.</p></article>
+            <article class="info-card info-card-dark"><span>TAF</span><h4>Previsão de aeródromo</h4><p>Previsão para o aeródromo e sua vizinhança, por período de validade.</p></article>
+            <article class="info-card info-card-dark"><span>SIGMET</span><h4>Fenômenos significativos</h4><p>Aviso de fenômenos que podem afetar a segurança das aeronaves em uma região de informação de voo.</p></article>
+          </div>
+
+          <div class="metar-tool" id="metar">
+            <label for="metar-input">Cole um METAR ou SPECI</label>
+            <textarea id="metar-input" rows="3" spellcheck="false" autocomplete="off" placeholder="Exemplo: METAR SBXX 091700Z 08006KT 9999 SCT030 FEW040TCU 33/21 Q1011="></textarea>
+            <div class="metar-actions">
+              <button class="button button-gold" type="button" data-metar-decode>Decodificar</button>
+              <button class="button button-ghost" type="button" data-metar-example>Usar exemplo</button>
+              <button class="button button-ghost" type="button" data-metar-clear>Limpar</button>
+            </div>
+            <div class="metar-output" id="metar-output" aria-live="polite"></div>
+          </div>
+          <p class="weather-attribution">Ferramenta educativa. O exemplo é ilustrativo, não é uma observação real. Não use esta página para planejamento ou operação de voo: consulte sempre as fontes oficiais, como a <a href="https://redemet.decea.mil.br/" target="_blank" rel="noopener noreferrer">REDEMET</a> e o <a href="https://aisweb.decea.mil.br/" target="_blank" rel="noopener noreferrer">AISWEB</a>, ambos do DECEA. Um METAR descreve o aeródromo que o emite; não há METAR oficial para Juína neste site.</p>
+        </div>
+      </section>
+
+      <!-- ===================== FONTES ===================== -->
+      <section class="obs-section section-sand" id="fontes" aria-labelledby="fontes-title">
+        <div class="container">
+          <div class="obs-head">
+            <p class="eyebrow eyebrow-light"><span></span> 07 · Fontes e método</p>
+            <h2 id="fontes-title">De onde vem<br><em>cada informação.</em></h2>
+            <p>Última revisão do conteúdo: 9 de outubro de 2026. Dados de terceiros pertencem às instituições citadas; confira as condições de uso de cada fonte antes de reproduzi-los.</p>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <caption class="sr-only">Fontes de dados do Observatório</caption>
+              <thead><tr><th scope="col">Informação</th><th scope="col">Fonte</th><th scope="col">Período</th><th scope="col">Tratamento</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Previsão</th><td><a href="https://api.met.no/weatherapi/locationforecast/2.0/documentation" target="_blank" rel="noopener noreferrer">MET Norway</a> (CC BY 4.0)</td><td>Atual, consulta no navegador</td><td>Dias agrupados no horário de Cuiabá; ponto de orvalho calculado pela fórmula de Magnus; indicadores automáticos simples.</td></tr>
+                <tr><th scope="row">Sol e Lua</th><td>Cálculo local: equações do NOAA (Sol) e séries de Meeus (Lua)</td><td>Qualquer data</td><td>Sem serviço externo. Margem típica de 1 a 2 minutos.</td></tr>
+                <tr><th scope="row">Clima observado</th><td><a href="https://portal.inmet.gov.br/" target="_blank" rel="noopener noreferrer">INMET</a>, estações automáticas (dados horários)</td><td>Jan–dez 2024</td><td>Horário UTC convertido para UTC−4. Dia “válido” só com horas suficientes na janela relevante: máxima e umidade mínima (11h–16h), mínima (3h–7h), chuva (22 h ou mais). Sem preenchimento de lacunas.</td></tr>
+                <tr><th scope="row">El Niño</th><td>Painel El Niño 2026–2027 (INMET, INPE, ANA, CEMADEN, SGB, SEDEC, CENSIPAM)</td><td>Edições nº 2 a 4 (jul–set/2026)</td><td>Resumo com indicação da edição de cada afirmação.</td></tr>
+                <tr><th scope="row">METAR</th><td>Norma de formato METAR (ICAO/OACI, adotada pelo DECEA)</td><td>—</td><td>Decodificação no navegador; não consulta nenhum serviço.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="obs-subhead obs-subhead-light">Glossário rápido</h3>
+          <dl class="glossary">
+            <div><dt>Umidade relativa (UR)</dt><dd>Quanto vapor há no ar em relação ao máximo possível naquela temperatura. Abaixo de 30%, órgãos de saúde e de defesa civil costumam recomendar atenção.</dd></div>
+            <div><dt>Ponto de orvalho</dt><dd>Temperatura em que o ar fica saturado e o vapor começa a condensar. Quanto mais perto da temperatura do ar, mais úmido e “abafado”.</dd></div>
+            <div><dt>QNH</dt><dd>Pressão ajustada ao nível médio do mar, usada pela aviação para acertar o altímetro (em hPa, no Brasil).</dd></div>
+            <div><dt>ENOS / El Niño</dt><dd>Oscilação Sul: aquecimento anormal do Pacífico equatorial central e leste, que altera a circulação atmosférica e muda a chuva e a temperatura em várias regiões.</dd></div>
+            <div><dt>Normal climatológica</dt><dd>Média de variáveis do clima em um período longo (em geral 30 anos). Serve de referência para dizer se um ano foi diferente do habitual.</dd></div>
+          </dl>
+
+          <div class="callout">
+            <strong>Sobre este Observatório</strong>
+            <p>É um projeto de informação da Briefing Técnico. Não emite previsão própria, laudo, alerta nem informação para operação aeronáutica. O estudo de um boletim local, com medições próprias e validação, continua descrito na <a href="pesquisa.html#estudo-metar">página inicial</a>.</p>
+          </div>
+        </div>
+      </section>
+          <section class="cloud-gallery-section section-light" id="fotografias" aria-labelledby="fotografias-title">
+        <div class="container">
+          <div class="cloud-gallery-heading">
+            <div>
+              <p class="eyebrow eyebrow-light"><span></span> Fotografias de campo · Juína, MT</p>
+              <h2 id="fotografias-title">Fotografias<br><em>de Juína e região.</em></h2>
+              <p>Registros fotográficos compartilhados de Juína, incluindo o céu iluminado sobre a igreja. As imagens retratam instantes específicos e não substituem observações meteorológicas instrumentais.</p>
+            </div>
+            <a class="cloud-submit-link" href="https://wa.me/5566996448934?text=Ol%C3%A1%2C%20gostaria%20de%20compartilhar%20um%20registro%20fotogr%C3%A1fico%20da%20regi%C3%A3o%20para%20avalia%C3%A7%C3%A3o%20e%20poss%C3%ADvel%20publica%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Compartilhar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="cloud-feature-grid" aria-label="Registro de 13 de outubro de 2026">
+            <figure class="cloud-record-card cloud-record-feature">
+              <img src="assets/cloud-records/registro-igreja-01-principal.jpg" alt="Igreja vista por inteiro em Juína, sob um céu iluminado de forma equilibrada no fim da tarde." width="1600" height="1200" loading="lazy" decoding="async">
+              <figcaption>
+                <span class="cloud-record-number">Destaque</span>
+                <time datetime="2026-10-13T20:05:00Z">2026-10-13T20:05:00Z</time>
+                <p>Juína, MT · 13 out. 2026 · 16h05 local (UTC−4)</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="cloud-gallery-grid">
+            <figure class="cloud-record-card">
+              <img src="assets/cloud-records/registro-01-2026-10-03-1742.jpg" alt="Vista do céu de Juína no fim da tarde, com nuvens claras em formação." width="1600" height="1200" loading="lazy" decoding="async">
+              <figcaption>
+                <span class="cloud-record-number">Registro 01</span>
+                <time datetime="2026-10-03T21:42:00Z">2026-10-03T21:42:00Z</time>
+                <p>Juína, MT · 03 out. 2026 · 17h42 local (UTC−4)</p>
+              </figcaption>
+            </figure>
+            <figure class="cloud-record-card">
+              <img src="assets/cloud-records/registro-02-2026-10-03-1744.jpg" alt="Nuvens sobre o céu de Juína observadas junto à copa de uma árvore." width="1600" height="1200" loading="lazy" decoding="async">
+              <figcaption>
+                <span class="cloud-record-number">Registro 02</span>
+                <time datetime="2026-10-03T21:44:00Z">2026-10-03T21:44:00Z</time>
+                <p>Juína, MT · 03 out. 2026 · 17h44 local (UTC−4)</p>
+              </figcaption>
+            </figure>
+            <figure class="cloud-record-card">
+              <img src="assets/cloud-records/registro-03-2026-10-03-1744.jpg" alt="Nuvens finas espalhadas em uma área azul do céu de Juína." width="1600" height="1200" loading="lazy" decoding="async">
+              <figcaption>
+                <span class="cloud-record-number">Registro 03</span>
+                <time datetime="2026-10-03T21:44:00Z">2026-10-03T21:44:00Z</time>
+                <p>Juína, MT · 03 out. 2026 · 17h44 local (UTC−4)</p>
+              </figcaption>
+            </figure>
+            <figure class="cloud-record-card">
+              <img src="assets/cloud-records/registro-04-2026-10-03-1745.jpg" alt="Camada suave de nuvens diante do céu de Juína no fim da tarde." width="1600" height="1200" loading="lazy" decoding="async">
+              <figcaption>
+                <span class="cloud-record-number">Registro 04</span>
+                <time datetime="2026-10-03T21:45:00Z">2026-10-03T21:45:00Z</time>
+                <p>Juína, MT · 03 out. 2026 · 17h45 local (UTC−4)</p>
+              </figcaption>
+            </figure>
+            <figure class="cloud-record-card">
+              <img src="assets/cloud-records/registro-05-2026-10-03-1745.jpg" alt="Nuvens de diferentes formas observadas sobre Juína no fim da tarde." width="1600" height="1200" loading="lazy" decoding="async">
+              <figcaption>
+                <span class="cloud-record-number">Registro 05</span>
+                <time datetime="2026-10-03T21:45:00Z">2026-10-03T21:45:00Z</time>
+                <p>Juína, MT · 03 out. 2026 · 17h45 local (UTC−4)</p>
+              </figcaption>
+            </figure>
+          </div>
+          <p class="cloud-gallery-note">Todos os horários foram convertidos do horário local de Juína (UTC−4) para UTC. Os registros 01–05 conservam abaixo a hora local original para consulta; o registro 06 foi capturado às 16h05 locais em 13/10/2026. Os valores UTC estão nos metadados <code>datetime</code> e são exibidos em cada registro. Para proteger endereços e privacidade, a galeria mostra apenas o município, não os pontos exatos indicados nos arquivos originais. Novos registros enviados por WhatsApp serão avaliados antes de uma eventual publicação; o site não recebe nem publica imagens automaticamente.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <a class="brand-lockup footer-lockup" href="index.html">
+          <img src="assets/brand/briefing-tecnico-marca.svg" alt="" width="34" height="36" loading="lazy">
+          <span>Briefing <strong>Técnico</strong></span>
+        </a>
+        <p>Observatório · Juína, Mato Grosso</p>
+        <a href="#conteudo">Voltar ao início ↑</a>
+        <small>© <span data-year>2026</span> Briefing Técnico.</small>
+      </div>
+      <div class="container rodape-legal">
+        <p>Responsável pelo conteúdo: Rafael da Silva Guimarães · Juína, MT · WhatsApp (66) 99644-8934 · <a href="privacidade.html">Privacidade e créditos</a></p>
+      </div>
+    </footer>
+    <noscript><p class="noscript-note">Os gráficos e as ferramentas do Observatório precisam de JavaScript. Os links de fontes funcionam normalmente.</p></noscript>
+  </body>
+</html>
