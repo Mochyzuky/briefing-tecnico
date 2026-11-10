@@ -2,7 +2,7 @@
 
 Site estático em HTML, CSS e JavaScript. Não há etapa de build: o workflow `.github/workflows/pages.yml` publica o conteúdo na branch `main` pelo GitHub Pages.
 
-Site público: <https://briefingtécnico.com.br/> (`xn--briefingtcnico-jkb.com.br` no DNS)
+Site público: <https://mochyzuky.github.io/briefing-tecnico/>
 
 ## Atualizar
 
@@ -16,7 +16,9 @@ Para testar localmente, execute `py -m http.server 8000` na pasta do site e abra
 
 ## DNS do domínio próprio
 
-O GitHub Pages está configurado para `xn--briefingtcnico-jkb.com.br`; o arquivo `CNAME` contém esse nome técnico. No DNS autoritativo do domínio, adicione os registros abaixo sem remover ou substituir outros registros existentes:
+O domínio próprio está temporariamente desativado no GitHub Pages enquanto o DNS não estiver configurado. Não adicione um arquivo `CNAME` nem configure o domínio no GitHub Pages antes de confirmar que os registros DNS abaixo foram criados e propagados. Quando estiverem prontos, configure `xn--briefingtcnico-jkb.com.br` em **Settings → Pages → Custom domain** e adicione o arquivo `CNAME` com esse mesmo nome técnico.
+
+No DNS autoritativo do domínio, os registros esperados são:
 
 | Tipo | Nome | Valor |
 |---|---|---|
@@ -32,7 +34,7 @@ O GitHub Pages está configurado para `xn--briefingtcnico-jkb.com.br`; o arquivo
 
 Após a propagação, confira **Settings → Pages** no GitHub e habilite **Enforce HTTPS** quando o certificado estiver disponível. A configuração em `www` é adicional; o endereço principal é o domínio sem `www`.
 
-Para verificar os registros, consulte os tipos A, AAAA para o domínio raiz e CNAME para `www`. O domínio pode continuar sendo servido por `https://mochyzuky.github.io/briefing-tecnico/` durante a propagação.
+Para verificar os registros, consulte os tipos A, AAAA para o domínio raiz e CNAME para `www`. Mantenha o endereço `https://mochyzuky.github.io/briefing-tecnico/` até que o DNS do domínio próprio esteja pronto e validado.
 
 ## Conteúdo e créditos
 
