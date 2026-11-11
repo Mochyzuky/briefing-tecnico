@@ -2,7 +2,7 @@
 
 Site estático em HTML, CSS e JavaScript. Não há etapa de build: o workflow `.github/workflows/pages.yml` publica o conteúdo na branch `main` pelo GitHub Pages.
 
-Site público: <https://mochyzuky.github.io/briefing-tecnico/>
+Site público: <https://www.briefingtecnico.com.br/>
 
 ## Atualizar
 
@@ -37,7 +37,7 @@ Mantenha também o TXT de verificação do domínio. Registros A e AAAA na raiz 
 
 O domínio acentuado `briefingtécnico.com.br` (`xn--briefingtcnico-jkb.com.br`) é separado e não está configurado como domínio deste site. Um CNAME por si só não faz um segundo domínio servir ou redirecionar o site: para utilizá-lo, é necessário configurar e proteger um redirecionamento HTTPS separado. Não altere seus registros sem verificar a configuração existente.
 
-O endereço anterior é <https://mochyzuky.github.io/briefing-tecnico/>. Depois que o HTTPS do domínio próprio estiver válido, atualize as URLs absolutas de imagens de compartilhamento para `https://www.briefingtecnico.com.br/`.
+O endereço anterior é <https://mochyzuky.github.io/briefing-tecnico/>. As URLs absolutas das imagens de compartilhamento usam o domínio principal.
 
 ## Conteúdo e créditos
 
