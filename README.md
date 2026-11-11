@@ -16,7 +16,7 @@ Para testar localmente, execute `py -m http.server 8000` na pasta do site e abra
 
 ## DNS do domínio próprio
 
-O domínio próprio está temporariamente desativado no GitHub Pages enquanto o DNS não estiver configurado. Não adicione um arquivo `CNAME` nem configure o domínio no GitHub Pages antes de confirmar que os registros DNS abaixo foram criados e propagados. Quando estiverem prontos, configure `xn--briefingtcnico-jkb.com.br` em **Settings → Pages → Custom domain** e adicione o arquivo `CNAME` com esse mesmo nome técnico.
+O domínio pretendido é **`briefingtecnico.com.br`** (sem acento). Ele é ASCII e não precisa de conversão para punycode. O domínio próprio está temporariamente desativado no GitHub Pages enquanto o DNS não estiver configurado. Não adicione um arquivo `CNAME` nem configure o domínio no GitHub Pages antes de confirmar que os registros DNS abaixo foram criados e propagados. Quando estiverem prontos, configure `briefingtecnico.com.br` em **Settings → Pages → Custom domain** e adicione um arquivo `CNAME` na raiz contendo exatamente `briefingtecnico.com.br`.
 
 No DNS autoritativo do domínio, os registros esperados são:
 
