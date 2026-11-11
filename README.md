@@ -25,25 +25,19 @@ Para uma futura avaliação de desempenho e organização, consulte `LEIA-ME-CLA
 
 ## DNS do domínio próprio
 
-O domínio pretendido é **`briefingtecnico.com.br`** (sem acento). Ele é ASCII e não precisa de conversão para punycode. O domínio próprio está temporariamente desativado no GitHub Pages enquanto o DNS não estiver configurado. Não adicione um arquivo `CNAME` nem configure o domínio no GitHub Pages antes de confirmar que os registros DNS abaixo foram criados e propagados. Quando estiverem prontos, configure `briefingtecnico.com.br` em **Settings → Pages → Custom domain** e adicione um arquivo `CNAME` na raiz contendo exatamente `briefingtecnico.com.br`.
+O endereço escolhido é **`www.briefingtecnico.com.br`** (sem acento). Ele foi configurado em **Settings → Pages → Custom domain** e a propriedade do domínio foi verificada na conta GitHub. Este site é publicado por GitHub Actions; a configuração do domínio fica no Pages, não em um arquivo `CNAME` no repositório.
 
-No DNS autoritativo do domínio, os registros esperados são:
+No DNS autoritativo do domínio, o registro necessário é:
 
 | Tipo | Nome | Valor |
 |---|---|---|
-| A | `@` (ou vazio) | `185.199.108.153` |
-| A | `@` (ou vazio) | `185.199.109.153` |
-| A | `@` (ou vazio) | `185.199.110.153` |
-| A | `@` (ou vazio) | `185.199.111.153` |
-| AAAA | `@` (ou vazio) | `2606:50c0:8000::153` |
-| AAAA | `@` (ou vazio) | `2606:50c0:8001::153` |
-| AAAA | `@` (ou vazio) | `2606:50c0:8002::153` |
-| AAAA | `@` (ou vazio) | `2606:50c0:8003::153` |
 | CNAME | `www` | `mochyzuky.github.io` |
 
-Após a propagação, confira **Settings → Pages** no GitHub e habilite **Enforce HTTPS** quando o certificado estiver disponível. A configuração em `www` é adicional; o endereço principal é o domínio sem `www`.
+Mantenha também o TXT de verificação do domínio. Registros A e AAAA na raiz não são necessários para usar apenas `www`. A emissão do certificado HTTPS pode demorar: confira **Settings → Pages** e habilite **Enforce HTTPS** quando estiver disponível.
 
-Para verificar os registros, consulte os tipos A, AAAA para o domínio raiz e CNAME para `www`. Mantenha o endereço `https://mochyzuky.github.io/briefing-tecnico/` até que o DNS do domínio próprio esteja pronto e validado.
+O domínio acentuado `briefingtécnico.com.br` (`xn--briefingtcnico-jkb.com.br`) é separado e não está configurado como domínio deste site. Um CNAME por si só não faz um segundo domínio servir ou redirecionar o site: para utilizá-lo, é necessário configurar e proteger um redirecionamento HTTPS separado. Não altere seus registros sem verificar a configuração existente.
+
+O endereço anterior é <https://mochyzuky.github.io/briefing-tecnico/>. Depois que o HTTPS do domínio próprio estiver válido, atualize as URLs absolutas de imagens de compartilhamento para `https://www.briefingtecnico.com.br/`.
 
 ## Conteúdo e créditos
 
