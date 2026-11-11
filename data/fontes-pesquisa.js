@@ -88,7 +88,7 @@ window.BT_PESQUISA = {
         { nome: "Matriz de Dados do Proagro", org: "Banco Central do Brasil", para: "Adesões, coberturas e comunicações de perdas do Proagro.", url: "https://www.bcb.gov.br/estabilidadefinanceira/proagro" },
         { nome: "Seguro rural (PSR)", org: "Ministério da Agricultura e Pecuária", para: "Programa de Subvenção ao Prêmio do Seguro Rural: dados, produtos, limites e normas.", url: "https://www.gov.br/agricultura/pt-br/assuntos/riscos-seguro/seguro-rural" },
         { nome: "ZARC", org: "Ministério da Agricultura e Pecuária", para: "Zoneamento Agrícola de Risco Climático: janelas de plantio por cultura e município.", url: "https://www.gov.br/agricultura/pt-br/assuntos/riscos-seguro/programa-nacional-de-zoneamento-agricola-de-risco-climatico" },
-        { nome: "SCR · Soluções, Consultoria e Reestruturação", org: "Consultoria e serviços técnicos em crédito rural", para: "Laudos de ocorrência rural, capacidade de pagamento e organização de pedidos de renegociação.", url: "scr.html" }
+        { nome: "SCR · Soluções, Consultoria e Reestruturação", org: "Consultoria e serviços técnicos em crédito rural", para: "Laudos de ocorrência rural, capacidade de pagamento e organização de pedidos de renegociação.", url: "produtor-rural.html" }
       ]
     },
     {
@@ -142,10 +142,10 @@ window.BT_PESQUISA = {
       titulo: "Geociências e meio ambiente",
       resumo: "Geologia, diamantes de Juína e a legislação ambiental de Mato Grosso.",
       fontes: [
-        { nome: "Artigo na Nature (2023)", org: "Timmerman et al.", para: "Idade dos diamantes sublitosféricos e o ciclo dos supercontinentes, em inglês.", url: "https://doi.org/10.1038/s41586-023-06662-9" },
+        { nome: "Nature", org: "Revista científica", para: "Página oficial da revista que publica pesquisas sobre diamantes superprofundos, em inglês.", url: "https://www.nature.com/nature/" },
         { nome: "GeoSGB", org: "Serviço Geológico do Brasil", para: "Mapas geológicos, recursos minerais e dados de campo.", url: "https://geosgb.sgb.gov.br/" },
         { nome: "SEMA-MT", org: "Secretaria de Estado de Meio Ambiente de Mato Grosso", para: "Licenciamento e normas ambientais do estado.", url: "https://www.sema.mt.gov.br/" },
-        { nome: "Diamantes de Juína", org: "Briefing Técnico", para: "Síntese em português do artigo da Nature.", url: "diamantes.html" }
+        { nome: "Diamantes de Juína", org: "Briefing Técnico", para: "Introdução em português sobre os diamantes da região.", url: "diamantes.html" }
       ]
     }
   ]

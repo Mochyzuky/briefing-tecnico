@@ -1,4 +1,4 @@
-/* Atendimento ao produtor rural · atendimento guiado (scr.html)
+/* Atendimento ao produtor rural · atendimento guiado (produtor-rural.html)
  *
  * Mesmo princípio do orçamento da Perfect Protection, adaptado ao atendimento ao produtor rural:
  *   1. o cliente escolhe o serviço (laudo, capacidade de pagamento, renegociação ou orientação);
@@ -7,7 +7,7 @@
  *   4. no envio, a mensagem é montada em ordem e o WhatsApp abre para revisão.
  *
  * Para mudar textos de indicação, edite INDICACOES. Para incluir um documento, acrescente um
- * <label class="scr-check" data-servicos="..."> na etapa 5 do scr.html.
+ * <label class="scr-check" data-servicos="..."> na etapa 5 do produtor-rural.html.
  * Usa o número central do script.js (BT.whatsapp) quando disponível.
  * Privacidade: nada é salvo nem enviado a servidores.
  */
@@ -240,7 +240,7 @@
     window.setTimeout(() => { if (erroServico) erroServico.hidden = true; atualizar(); }, 0);
   });
 
-  // Permite chegar com o serviço já escolhido: scr.html?servico=laudo#contato
+  // Permite chegar com o serviço já escolhido: produtor-rural.html?servico=laudo#contato
   const inicial = new URLSearchParams(location.search).get("servico");
   const radioInicial = radiosServico.find((r) => r.value === inicial);
   if (radioInicial) radioInicial.checked = true;

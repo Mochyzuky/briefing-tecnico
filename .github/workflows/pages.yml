@@ -29,7 +29,7 @@ jobs:
       - name: Preparar o site (sem a pasta .github)
         run: |
           mkdir -p _site
-          rsync -a --exclude '.git' --exclude '.github' --exclude 'README.md' ./ _site/
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'README.md' --exclude 'LEIA-ME-CLAUDE-DESEMPENHO.md' ./ _site/
       - name: Enviar o pacote do site
         uses: actions/upload-pages-artifact@v3
         with:

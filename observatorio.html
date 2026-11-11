@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#11191b">
-    <meta name="description" content="Observatório meteorológico da Briefing Técnico: previsão para Juína, MT, clima observado pelo INMET, El Niño 2026/27, sol e lua e meteorologia aeronáutica — sempre com fonte, data e limites.">
+    <meta name="description" content="Observatório meteorológico da Briefing Técnico: previsão para Juína, MT, clima observado pelo INMET, El Niño 2026/27, sol e lua e meteorologia aeronáutica: sempre com fonte, data e limites.">
     <title>Observatório meteorológico · Juína, MT | Briefing Técnico</title>
     <link rel="icon" href="assets/brand/briefing-tecnico-marca.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css?v=locations-br-20261022">
     <link rel="stylesheet" href="navegacao.css?v=nav-20261015">
     <link rel="stylesheet" href="ajustes.css?v=20261021">
+    <link rel="stylesheet" href="atalhos.css?v=20261111">
     <script src="data/observatorio-dados.js" defer></script>
     <script src="script.js?v=locations-br-20261022" defer></script>
     <script src="navegacao.js?v=nav-20261015" defer></script>
@@ -27,27 +28,27 @@
           <span>Assuntos</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
         </button>
         <nav class="main-nav" id="main-navigation" aria-label="Áreas principais">
-          <a class="topico" href="briefing.html">Briefing Técnico</a>
-          <a class="topico" href="scr.html" aria-current="page">Produtor rural</a>
+          <a class="topico" href="briefing.html" aria-current="page">Briefing Técnico</a>
+          <a class="topico" href="produtor-rural.html">Produtor rural</a>
+          <a class="topico" href="mercado.html">Mercado</a>
           <a class="topico" href="perfect-protection.html">Perfect Protection · Aviação</a>
           <a class="topico" href="index.html#janela-contato">Contato</a>
         </nav>
       </div>
     </header>
 
-    <nav class="obs-subnav" aria-label="Seções da área do produtor rural">
+    <nav class="obs-subnav" aria-label="Seções do Briefing Técnico">
       <div class="container obs-subnav-row">
-        <a href="pesquisa.html">Pesquisa rural</a>
-        <a href="mercado.html">Mercado rural</a>
-        <a href="scr.html">Produtor rural</a>
+        <a href="briefing.html">Briefing Técnico</a>
         <a href="#previsao">Previsão</a>
         <a href="#sol-lua">Sol e Lua</a>
         <a href="#clima">Clima observado</a>
         <a href="#regiao">Região</a>
         <a href="#el-nino">El Niño</a>
-        <a href="perfect-protection.html#aviacao">Aviação · Perfect Protection</a>
-        <a href="#fotografias">Fotografias</a>
+        <a href="#estudos-aviacao">Estudos de aviação</a>
         <a href="#fontes">Fontes e método</a>
+        <a href="produtor-rural.html">Produtor rural</a>
+        <a href="mercado.html">Mercado</a>
       </div>
     </nav>
 
@@ -375,13 +376,36 @@
         </div>
       </section>
 
+      <!-- ===================== ESTUDOS DE AVIAÇÃO ===================== -->
+      <section class="obs-section section-light" id="estudos-aviacao" aria-labelledby="estudos-aviacao-title">
+        <div class="container estudos-aviacao-grid">
+          <div class="obs-head">
+            <p class="eyebrow eyebrow-light"><span></span> Estudos de aviação</p>
+            <h2 id="estudos-aviacao-title">Informação para<br><em>quem estuda e voa.</em></h2>
+            <p>Referências públicas úteis para estudo e consulta aeronáutica. Elas complementam (e não substituem) a documentação oficial, a orientação de profissionais habilitados e a avaliação das condições reais de voo.</p>
+          </div>
+          <div class="estudos-aviacao-links">
+            <a href="https://redemet.decea.mil.br/" target="_blank" rel="noopener noreferrer">
+              <span><strong>REDEMET · DECEA</strong><small>Produtos meteorológicos e observações aeronáuticas oficiais.</small></span><span aria-hidden="true">↗</span>
+            </a>
+            <a href="https://aisweb.decea.mil.br/" target="_blank" rel="noopener noreferrer">
+              <span><strong>AISWEB · DECEA</strong><small>Informação aeronáutica oficial, incluindo dados de aeródromos.</small></span><span aria-hidden="true">↗</span>
+            </a>
+            <a href="#aviacao">
+              <span><strong>Aprenda a ler um METAR</strong><small>Ferramenta educativa de decodificação, logo abaixo. Não é previsão nem avaliação de segurança de voo.</small></span><span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <p class="estudos-aviacao-nota">Conteúdo de estudo. Este site não presta serviços de planejamento, despacho ou aconselhamento operacional de voo.</p>
+        </div>
+      </section>
+
       <!-- ===================== AVIAÇÃO ===================== -->
       <section class="obs-section section-dark" id="aviacao" aria-labelledby="avi-title">
         <div class="container">
           <div class="obs-head obs-head-dark">
             <p class="eyebrow"><span></span> 06 · Meteorologia aeronáutica</p>
             <h2 id="avi-title">Aprenda a ler<br><em>um METAR.</em></h2>
-            <p>Mensagens meteorológicas aeronáuticas seguem um formato codificado e padronizado. A ferramenta abaixo traduz um METAR ou SPECI para linguagem comum, com fins educativos. Consulte também os recursos de aviação da <a href="perfect-protection.html#aviacao">Perfect Protection</a>.</p>
+            <p>Mensagens meteorológicas aeronáuticas seguem um formato codificado e padronizado. A ferramenta abaixo traduz um METAR ou SPECI para linguagem comum, com fins educativos. Fontes oficiais estão reunidas na seção <a href="#estudos-aviacao">Estudos de aviação</a>.</p>
           </div>
 
           <div class="avi-grid">
@@ -440,71 +464,6 @@
             <strong>Sobre este Observatório</strong>
             <p>É um projeto de informação da Briefing Técnico. Não emite previsão própria, laudo, alerta nem informação para operação aeronáutica. O estudo de um boletim local, com medições próprias e validação, continua descrito na <a href="pesquisa.html#estudo-metar">página inicial</a>.</p>
           </div>
-        </div>
-      </section>
-          <section class="cloud-gallery-section section-light" id="fotografias" aria-labelledby="fotografias-title">
-        <div class="container">
-          <div class="cloud-gallery-heading">
-            <div>
-              <p class="eyebrow eyebrow-light"><span></span> Fotografias de campo · Juína, MT</p>
-              <h2 id="fotografias-title">Fotografias<br><em>de Juína e região.</em></h2>
-              <p>Registros fotográficos compartilhados de Juína, incluindo o céu iluminado sobre a igreja. As imagens retratam instantes específicos e não substituem observações meteorológicas instrumentais.</p>
-            </div>
-            <a class="cloud-submit-link" href="https://wa.me/5566996448934?text=Ol%C3%A1%2C%20gostaria%20de%20compartilhar%20um%20registro%20fotogr%C3%A1fico%20da%20regi%C3%A3o%20para%20avalia%C3%A7%C3%A3o%20e%20poss%C3%ADvel%20publica%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Compartilhar pelo WhatsApp <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="cloud-feature-grid" aria-label="Registro de 13 de outubro de 2026">
-            <figure class="cloud-record-card cloud-record-feature">
-              <img src="assets/cloud-records/registro-igreja-01-principal.jpg" alt="Igreja vista por inteiro em Juína, sob um céu iluminado de forma equilibrada no fim da tarde." width="1600" height="1200" loading="lazy" decoding="async">
-              <figcaption>
-                <span class="cloud-record-number">Destaque</span>
-                <time datetime="2026-10-13T20:05:00Z">2026-10-13T20:05:00Z</time>
-                <p>Juína, MT · 13 out. 2026 · 16h05 local (UTC−4)</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="cloud-gallery-grid">
-            <figure class="cloud-record-card">
-              <img src="assets/cloud-records/registro-01-2026-10-03-1742.jpg" alt="Vista do céu de Juína no fim da tarde, com nuvens claras em formação." width="1600" height="1200" loading="lazy" decoding="async">
-              <figcaption>
-                <span class="cloud-record-number">Registro 01</span>
-                <time datetime="2026-10-03T21:42:00Z">2026-10-03T21:42:00Z</time>
-                <p>Juína, MT · 03 out. 2026 · 17h42 local (UTC−4)</p>
-              </figcaption>
-            </figure>
-            <figure class="cloud-record-card">
-              <img src="assets/cloud-records/registro-02-2026-10-03-1744.jpg" alt="Nuvens sobre o céu de Juína observadas junto à copa de uma árvore." width="1600" height="1200" loading="lazy" decoding="async">
-              <figcaption>
-                <span class="cloud-record-number">Registro 02</span>
-                <time datetime="2026-10-03T21:44:00Z">2026-10-03T21:44:00Z</time>
-                <p>Juína, MT · 03 out. 2026 · 17h44 local (UTC−4)</p>
-              </figcaption>
-            </figure>
-            <figure class="cloud-record-card">
-              <img src="assets/cloud-records/registro-03-2026-10-03-1744.jpg" alt="Nuvens finas espalhadas em uma área azul do céu de Juína." width="1600" height="1200" loading="lazy" decoding="async">
-              <figcaption>
-                <span class="cloud-record-number">Registro 03</span>
-                <time datetime="2026-10-03T21:44:00Z">2026-10-03T21:44:00Z</time>
-                <p>Juína, MT · 03 out. 2026 · 17h44 local (UTC−4)</p>
-              </figcaption>
-            </figure>
-            <figure class="cloud-record-card">
-              <img src="assets/cloud-records/registro-04-2026-10-03-1745.jpg" alt="Camada suave de nuvens diante do céu de Juína no fim da tarde." width="1600" height="1200" loading="lazy" decoding="async">
-              <figcaption>
-                <span class="cloud-record-number">Registro 04</span>
-                <time datetime="2026-10-03T21:45:00Z">2026-10-03T21:45:00Z</time>
-                <p>Juína, MT · 03 out. 2026 · 17h45 local (UTC−4)</p>
-              </figcaption>
-            </figure>
-            <figure class="cloud-record-card">
-              <img src="assets/cloud-records/registro-05-2026-10-03-1745.jpg" alt="Nuvens de diferentes formas observadas sobre Juína no fim da tarde." width="1600" height="1200" loading="lazy" decoding="async">
-              <figcaption>
-                <span class="cloud-record-number">Registro 05</span>
-                <time datetime="2026-10-03T21:45:00Z">2026-10-03T21:45:00Z</time>
-                <p>Juína, MT · 03 out. 2026 · 17h45 local (UTC−4)</p>
-              </figcaption>
-            </figure>
-          </div>
-          <p class="cloud-gallery-note">Todos os horários foram convertidos do horário local de Juína (UTC−4) para UTC. Os registros 01–05 conservam abaixo a hora local original para consulta; o registro 06 foi capturado às 16h05 locais em 13/10/2026. Os valores UTC estão nos metadados <code>datetime</code> e são exibidos em cada registro. Para proteger endereços e privacidade, a galeria mostra apenas o município, não os pontos exatos indicados nos arquivos originais. Novos registros enviados por WhatsApp serão avaliados antes de uma eventual publicação; o site não recebe nem publica imagens automaticamente.</p>
         </div>
       </section>
     </main>

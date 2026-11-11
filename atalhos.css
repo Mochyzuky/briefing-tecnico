@@ -1,0 +1,20 @@
+/* Atalhos e blocos adicionados em 11/11/2026: estudos de aviação, atalhos para Mercado e Tempo e clima. */
+.estudos-aviacao-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.estudos-aviacao-links{display:grid;gap:12px}
+.estudos-aviacao-links a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;border:1px solid rgba(17,25,27,.14);background:#fffdf8;color:#11191b;text-decoration:none;transition:border-color .2s,transform .2s}
+.estudos-aviacao-links a:hover,.estudos-aviacao-links a:focus-visible{border-color:#b8955a;transform:translateY(-1px)}
+.estudos-aviacao-links strong{display:block;font-size:1rem}
+.estudos-aviacao-links small{display:block;margin-top:4px;color:#4b5557;font-size:.88rem;line-height:1.45}
+.estudos-aviacao-nota{grid-column:1/-1;margin:0;padding:14px 18px;border-left:3px solid #b8955a;background:rgba(184,149,90,.1);font-size:.9rem;color:#33403f}
+.atalhos-destaque{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.atalho-botao{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1.5px solid #d8bd83;border-radius:2px;color:#f6f2e8;background:rgba(216,189,131,.08);font-weight:600;text-decoration:none;font-size:.88rem}
+.atalho-botao:hover,.atalho-botao:focus-visible{background:rgba(216,189,131,.2)}
+.atalho-botao.claro{color:#11191b;border-color:#b8955a;background:#fffdf8}
+.atalho-botao.claro:hover{background:#f3ead6}
+.atalhos-faixa{padding:28px 0 8px}
+.atalhos-faixa .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;border:1px solid rgba(17,25,27,.12);background:#fffdf8}
+.atalhos-faixa p{margin:0;color:#33403f;max-width:640px}
+.atalhos-faixa p strong{color:#11191b}
+@media (max-width:760px){.estudos-aviacao-grid{grid-template-columns:1fr}.atalhos-faixa .container{flex-direction:column;align-items:flex-start}}
+.scr-brand-art img[src*="produtor-rural-simbolo"]{width:56%;max-width:260px;height:auto;margin:36px auto 18px;display:block}
+.site-footer img[src*="produtor-rural-simbolo"]{width:84px;height:auto}

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="ajustes.css?v=20261021">
     <link rel="stylesheet" href="perfect-protection.css?v=perfil-20261027">
     <link rel="stylesheet" href="banners.css?v=20261027b">
+    <link rel="stylesheet" href="atalhos.css?v=20261111">
     <script src="script.js?v=locations-br-20261022" defer></script>
     <script src="navegacao.js?v=nav-20261015" defer></script>
   </head>
@@ -28,7 +29,8 @@
         </button>
         <nav class="main-nav" id="main-navigation" aria-label="Áreas principais">
           <a class="topico" href="briefing.html">Briefing Técnico</a>
-          <a class="topico" href="scr.html">Produtor rural</a>
+          <a class="topico" href="produtor-rural.html">Produtor rural</a>
+          <a class="topico" href="mercado.html">Mercado</a>
           <a class="topico" href="perfect-protection.html">Perfect Protection · Aviação</a>
           <a class="topico" href="#janela-contato">Contato</a>
         </nav>
@@ -55,7 +57,7 @@
         <p>Laudo que mostra quanto a propriedade consegue pagar hoje, comparando receitas e custos.</p>
       </div>
 
-      <a class="janela-acao" href="scr.html">Ver como funciona →</a>
+      <a class="janela-acao" href="produtor-rural.html">Ver como funciona →</a>
   </section>
   <section class="janela" id="janela-aeronave" tabindex="-1" aria-labelledby="t-aeronave" hidden>
       <div class="janela-topo">
@@ -81,12 +83,12 @@
   </section>
   <section class="janela" id="janela-tempo" tabindex="-1" aria-labelledby="t-tempo" hidden>
       <div class="janela-topo">
-        <span class="janela-rotulo">Pesquisa rural</span>
+        <span class="janela-rotulo">Briefing Técnico</span>
         <button class="janela-fechar" type="button" data-fechar aria-label="Fechar: Tempo e clima no campo">Fechar ×</button>
       </div>
       <h2 id="t-tempo">Tempo e clima no campo</h2>
-      <p>Previsão, clima observado e estudos agroclimáticos estão organizados junto aos demais assuntos rurais, com fontes e limites de uso identificados.</p>
-      <a class="janela-acao" href="scr.html">Entrar na área do produtor rural →</a>
+      <p>Previsão, clima observado, El Niño e o contexto da região estão no Briefing Técnico, com fontes e limites de uso identificados.</p>
+      <a class="janela-acao" href="observatorio.html">Ver tempo e clima em Juína →</a>
   </section>
   <section class="janela" id="janela-pesquisa" tabindex="-1" aria-labelledby="t-pesquisa" hidden>
       <div class="janela-topo">
@@ -94,18 +96,18 @@
         <button class="janela-fechar" type="button" data-fechar aria-label="Fechar: Cada assunto no seu espaço">Fechar ×</button>
       </div>
       <h2 id="t-pesquisa">Cada assunto no seu espaço</h2>
-      <p>A navegação separa pesquisa rural, temas gerais e aviação para facilitar a consulta.</p>
+      <p>A navegação separa o produtor rural, os temas gerais e a Perfect Protection para facilitar a consulta.</p>
       <div class="janela-item">
-        <h3><a href="scr.html">Pesquisa rural</a></h3>
-        <p>Serviços técnicos, pesquisa, mercado agropecuário, produção e clima.</p>
+        <h3><a href="produtor-rural.html">Pesquisa rural</a></h3>
+        <p>Serviços técnicos, pesquisa rural e mercado agropecuário.</p>
       </div>
       <div class="janela-item">
         <h3><a href="briefing.html">Briefing Técnico · temas gerais</a></h3>
-        <p>Leituras e fontes de interesse independente, com ferramenta local de plotagem de dados.</p>
+        <p>Tempo e clima, estudos de aviação, leituras de interesse geral e ferramenta local de plotagem de dados.</p>
       </div>
       <div class="janela-item">
         <h3><a href="perfect-protection.html">Perfect Protection · aviação</a></h3>
-        <p>Catálogo de capas e acessórios e referências aeronáuticas.</p>
+        <p>Catálogo de capas e acessórios para aeronaves.</p>
       </div>
 
       <a class="janela-acao" href="briefing.html">Abrir a pesquisa independente →</a>
@@ -117,7 +119,7 @@
       </div>
       <h2 id="t-glossario">Glossário técnico</h2>
       <p>O glossário técnico, as siglas e as orientações sobre serviços rurais ficam reunidos na área do produtor rural.</p>
-      <a class="janela-acao" href="scr.html#duvidas">Ver o glossário completo →</a>
+      <a class="janela-acao" href="produtor-rural.html#duvidas">Ver o glossário completo →</a>
   </section>
   <section class="janela" id="janela-contato" tabindex="-1" aria-labelledby="t-contato" hidden>
       <div class="janela-topo">
@@ -145,16 +147,16 @@
     <main id="conteudo">
       <section class="capa capa-briefing capa-com-banner" aria-labelledby="capa-titulo">
         <picture>
-          <source media="(max-width: 1000px)" srcset="assets/banners/banner-inicial-faixa.jpg" width="1200" height="720">
-          <source media="(max-width: 1240px)" srcset="assets/banners/banner-inicial-medio.jpg" width="760" height="1000">
-          <img class="capa-foto" src="assets/banners/banner-inicial.jpg" alt="Avião agrícola amarelo, céu com nuvens e lavouras de Juína, em Mato Grosso" width="1000" height="1000">
+          <source media="(max-width: 1000px)" srcset="assets/banners/banner-inicial-faixa.jpg?v=20261111b" width="1200" height="720">
+          <source media="(max-width: 1240px)" srcset="assets/banners/banner-inicial-medio.jpg?v=20261111b" width="760" height="1000">
+          <img class="capa-foto" src="assets/banners/banner-inicial.jpg?v=20261111b" alt="Marcas da Perfect Protection, do Briefing Técnico e do Produtor Rural, em três painéis" width="1000" height="1000">
         </picture>
         <div class="capa-veu" aria-hidden="true"></div>
         <div class="container">
           <div class="capa-texto">
             <p class="capa-kicker">Briefing Técnico · pesquisa e desenvolvimento</p>
             <h1 id="capa-titulo">Informação técnica<br>para <em>compreender e decidir.</em></h1>
-            <p>Um espaço para pesquisa, conhecimento e atuação técnica. Explore temas gerais do Briefing Técnico, atendimento ao produtor rural e aviação na área própria da Perfect Protection.</p>
+            <p>Um espaço para pesquisa, conhecimento e atuação técnica. Explore temas gerais do Briefing Técnico, atendimento ao produtor rural e capas e acessórios para aeronaves na área da Perfect Protection.</p>
             <div class="capa-botoes">
               <a class="btn-ouro" href="briefing.html">Conhecer o Briefing Técnico <span aria-hidden="true">→</span></a>
               <a class="btn-linha" href="#portas-titulo">Explorar as áreas <span aria-hidden="true">↓</span></a>
@@ -169,7 +171,7 @@
           <h2 id="portas-titulo">Explore este espaço.</h2>
           <div class="portas-grid">
             <a class="porta porta-pp" href="perfect-protection.html">
-              <span class="porta-topo"><img src="assets/perfect-protection/perfil/perfil-card.jpg" alt="" width="900" height="450" loading="lazy"><img class="porta-selo" src="assets/perfect-protection/perfect-protection-simbolo.svg" alt="" width="46" height="50"><span>01 · Catálogo e orçamento</span></span>
+              <span class="porta-topo"><img src="assets/banners/card-perfect-protection.jpg?v=20261111b" alt="" width="900" height="450" loading="lazy"><span>01 · Catálogo e orçamento</span></span>
               <span class="porta-corpo">
                 <span class="porta-marca">Capas e acessórios para aeronaves</span>
                 <h3>Perfect Protection</h3>
@@ -179,25 +181,31 @@
               </span>
             </a>
             <a class="porta porta-bt" href="briefing.html">
-              <span class="porta-topo"><img src="assets/cloud-records/registro-02-2026-10-03-1744.jpg" alt="" width="900" height="450" loading="lazy"><img class="porta-selo" src="assets/brand/briefing-tecnico-marca.svg" alt="" width="46" height="48"><span>02 · Pesquisa e temas gerais</span></span>
+              <span class="porta-topo"><img src="assets/banners/card-briefing-tecnico.jpg?v=20261111b" alt="" width="900" height="450" loading="lazy"><span>02 · Pesquisa e temas gerais</span></span>
               <span class="porta-corpo">
                 <span class="porta-marca">Ciência, território e dados</span>
                 <h3>Briefing Técnico</h3>
-                <p>Ciência, território e dados, em linguagem simples: diamantes de Juína, fontes confiáveis e uma ferramenta para montar gráficos com os seus dados.</p>
-                <span class="porta-tags"><span>Fonte sempre à vista</span><span>Plotagem no navegador</span><span>Seus dados ficam com você</span></span>
+                <p>Ciência, território e dados, em linguagem simples: tempo e clima em Juína, estudos de aviação, diamantes da região e uma ferramenta para montar gráficos com os seus dados.</p>
+                <span class="porta-tags"><span>Tempo e clima</span><span>Estudos de aviação</span><span>Gráficos com seus dados</span></span>
                 <span class="porta-seta">Explorar temas e plotar dados →</span>
               </span>
             </a>
-            <a class="porta porta-pr" href="scr.html">
-              <span class="porta-topo"><img src="assets/scr/juina-aerea.jpg" alt="" width="900" height="450" loading="lazy"><img class="porta-selo" src="assets/scr/scr-logo.svg" alt="" width="60" height="32"><span>03 · Atendimento ao produtor rural</span></span>
+            <a class="porta porta-pr" href="produtor-rural.html">
+              <span class="porta-topo"><img src="assets/banners/card-produtor-rural.jpg?v=20261111b" alt="" width="900" height="450" loading="lazy"><span>03 · Atendimento ao produtor rural</span></span>
               <span class="porta-corpo">
                 <span class="porta-marca">Apoio para quem vive da terra</span>
                 <h3>Produtor rural</h3>
-                <p>Renegociação de dívidas e laudos para quem perdeu parte da produção ou está com a parcela pesada. Também reúne mercado, clima e pesquisa da região.</p>
+                <p>Renegociação de dívidas e laudos para quem perdeu parte da produção ou está com a parcela pesada. Também reúne mercado e pesquisa da região.</p>
                 <span class="porta-tags"><span>Renegociação de dívidas</span><span>Laudo de perda</span><span>Conversa simples, pelo WhatsApp</span></span>
                 <span class="porta-seta">Ver como funciona →</span>
               </span>
             </a>
+          </div>
+          <div class="atalhos-faixa atalhos-faixa-inicio">
+            <div class="container">
+              <p><strong>Mercado agropecuário:</strong> séries do Banco Central e links para cotações de referência, em um só lugar.</p>
+              <a class="atalho-botao claro" href="mercado.html">Ver o mercado <span aria-hidden="true">→</span></a>
+            </div>
           </div>
         </div>
       </section>
